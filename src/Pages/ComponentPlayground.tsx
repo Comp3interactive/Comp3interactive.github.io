@@ -1,6 +1,9 @@
 import React from "react";
 
 import { Card } from "../Components/Card/Card";
+import { Header } from "../Components/Header/Header";
+import { Footer } from "../Components/Footer/Footer";
+
 import { Container, Row, Col } from "react-grid-system";
 import styled from "@emotion/styled";
 
@@ -13,6 +16,7 @@ const GridContainer = styled.div`
 export const ComponentPlayground = () => {
   return (
     <>
+      <Header />
       <GridContainer>
         <Container fluid>
           <Row nogutter>
@@ -46,6 +50,8 @@ export const ComponentPlayground = () => {
           </Row>
         </Container>
       </GridContainer>
+
+      <Footer />
     </>
   );
 };
