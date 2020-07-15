@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { ConstructionText } from "../Components/Typography/Typography";
 import { keyframes } from "@emotion/core";
 import { Link } from "../Components/Link/Link";
+import { Links } from "../Utils/ExternalLinks";
 
 const bounce = keyframes`
   from, 20%, 53%, 80%, to {
@@ -36,16 +37,15 @@ export const UnderConstruction = () => {
       <ConstructionText>THIS PAGE IS UNDER CONSTRUCTION</ConstructionText>
       <StyledImage src="./Images/Bottlecaps/comp3.png" alt="comp3 logo" />
       <ConstructionText>You can still find us here:</ConstructionText>
-      <Link label="YouTube" href="https://www.youtube.com/comp3interactive" />
-      <Link label="Facebook" href="https://www.facebook.com/comp3interactive" />
-      <Link
-        label="Instagram"
-        href="https://www.instagram.com/comp3interactive"
-      />
-      <Link label="Twitter" href="https://www.twitter.com/comp3int" />
-      <Link label="Patreon" href="https://www.patreon.com/comp3interactive" />
-      <Link label="GitHub" href="https://www.github.com/comp3interactive" />
-      <Link label="Itch.io" href="https://comp3interactive.itch.io" />
+      <Link label="YouTube" href={Links.youtube} />
+      <Link label="Facebook" href={Links.facebook} />
+      <Link label="Instagram" href={Links.instagram} />
+      <Link label="Discord" href={Links.discord} />
+      <Link label="Twitter" href={Links.twitter} />
+      <Link label="Patreon" href={Links.patreon} />
+      <Link label="GitHub" href={Links.github} />
+      <Link label="Itch.io" href={Links.itch} />
+      <Link label="Google Play" href={Links.googleplay} />
     </>
   );
 };
