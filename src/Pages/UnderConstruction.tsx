@@ -1,9 +1,6 @@
-import React from 'react';
+import React from "react";
+import { ConstructionText } from "../Components/Typography/Typography";
 
 export const UnderConstruction = () => {
-    return (
-        <>
-            THIS PAGE IS UNDER CONSTRUCTION
-        </>
-    );
-}
+  return <ConstructionText>THIS PAGE IS UNDER CONSTRUCTION</ConstructionText>;
+};

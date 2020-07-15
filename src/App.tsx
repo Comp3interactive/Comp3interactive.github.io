@@ -1,11 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { UnderConstruction } from './Pages/UnderConstruction'
+import React from "react";
+import "./App.css";
+import { UnderConstruction } from "./Pages/UnderConstruction";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <UnderConstruction />
+    <Router>
+      <Switch>
+        <Route path="/" exact component={UnderConstruction} />
+      </Switch>
+    </Router>
   );
 }
 
