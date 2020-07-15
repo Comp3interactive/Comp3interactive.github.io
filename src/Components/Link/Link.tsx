@@ -7,9 +7,12 @@ export interface LinkProps {
   href: string;
 }
 
-const StyledLink = styled.a`
-  font-size: ${Tokens.Font.sizes.small};
+const LinkContainer = styled.div`
   text-align: center;
+`;
+
+const StyledLink = styled.a`
+  font-size: ${Tokens.Font.sizes.medium};
   margin-bottom: 10px;
   color: ${Tokens.Colour.green};
   margin-top: 20px;
@@ -17,5 +20,9 @@ const StyledLink = styled.a`
 `;
 
 export const Link = ({ label, href }: LinkProps) => {
-  return <StyledLink href={href}>{label}</StyledLink>;
+  return (
+    <LinkContainer>
+      <StyledLink href={href}>{label}</StyledLink>
+    </LinkContainer>
+  );
 };

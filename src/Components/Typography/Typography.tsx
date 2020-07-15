@@ -3,9 +3,9 @@ import styled from "@emotion/styled";
 import * as Tokens from "../.Design/Tokens";
 
 const ConstructionTextStyle = styled.div`
-  font-size: ${Tokens.Font.sizes.giant};
+  font-size: ${Tokens.Font.sizes.large};
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   color: white;
   margin-top: 20px;
 
