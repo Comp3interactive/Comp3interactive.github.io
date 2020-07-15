@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import * as Tokens from "../Design/Tokens";
+import * as Tokens from "../.Design/Tokens";
 
 const ConstructionTextStyle = styled.div`
   font-size: ${Tokens.Font.sizes.giant};
@@ -14,6 +14,15 @@ const ConstructionTextStyle = styled.div`
   -webkit-text-fill-color: transparent;
 `;
 
+const StyledText = styled.p`
+  font-size: ${Tokens.Font.sizes.medium};
+  color: ${Tokens.Colour.white};
+`;
+
 export const ConstructionText: React.FC = (props) => {
   return <ConstructionTextStyle>{props.children}</ConstructionTextStyle>;
+};
+
+export const Text: React.FC = (props) => {
+  return <StyledText>{props.children}</StyledText>;
 };
