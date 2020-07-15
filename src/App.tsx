@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { UnderConstruction } from "./Pages/UnderConstruction";
+import { ComponentPlayground } from "./Pages/ComponentPlayground";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact component={UnderConstruction} />
+        <Route path="/Playground" exact component={ComponentPlayground} />
       </Switch>
     </Router>
   );

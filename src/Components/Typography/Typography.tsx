@@ -1,8 +1,7 @@
-import React from "react";
 import styled from "@emotion/styled";
 import * as Tokens from "../.Design/Tokens";
 
-const ConstructionTextStyle = styled.div`
+export const ConstructionTextStyle = styled.div`
   font-size: ${Tokens.Font.sizes.large};
   text-align: center;
   margin-bottom: 50px;
@@ -14,15 +13,30 @@ const ConstructionTextStyle = styled.div`
   -webkit-text-fill-color: transparent;
 `;
 
-const StyledText = styled.p`
+export const StyledText = styled.div`
   font-size: ${Tokens.Font.sizes.medium};
+  color: ${Tokens.Colour.darkGrey};
+`;
+
+export const StyledCardHeaderText = styled.div`
+  font-size: ${Tokens.Font.sizes.large};
+  font-weight: ${Tokens.Font.weight.bold};
   color: ${Tokens.Colour.white};
 `;
 
-export const ConstructionText: React.FC = (props) => {
-  return <ConstructionTextStyle>{props.children}</ConstructionTextStyle>;
-};
+export const StyledCardSubtitleText = styled.div`
+  font-size: ${Tokens.Font.sizes.medium};
+  color: ${Tokens.Colour.darkGrey};
+`;
 
-export const Text: React.FC = (props) => {
-  return <StyledText>{props.children}</StyledText>;
-};
+export const StyledCardBodyText = styled.div`
+  font-size: ${Tokens.Font.sizes.small};
+  color: ${Tokens.Colour.mediumGrey};
+`;
+
+export const StyledCardFooterText = styled.div`
+  font-size: ${Tokens.Font.sizes.tiny};
+  font-style: italic;
+  color: ${Tokens.Colour.lightGrey};
+  font-weight: ${Tokens.Font.weight.bold};
+`;

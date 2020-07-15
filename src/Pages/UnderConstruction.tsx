@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { ConstructionText } from "../Components/Typography/Typography";
+import { ConstructionTextStyle } from "../Components/Typography/Typography";
 import { keyframes } from "@emotion/core";
 import { Link } from "../Components/Link/Link";
 import { Links } from "../Utils/ExternalLinks";
@@ -34,9 +34,11 @@ const StyledImage = styled.img`
 export const UnderConstruction = () => {
   return (
     <>
-      <ConstructionText>THIS PAGE IS UNDER CONSTRUCTION</ConstructionText>
+      <ConstructionTextStyle>
+        THIS PAGE IS UNDER CONSTRUCTION
+      </ConstructionTextStyle>
       <StyledImage src="./Images/Bottlecaps/comp3.png" alt="comp3 logo" />
-      <ConstructionText>You can still find us here:</ConstructionText>
+      <ConstructionTextStyle>You can still find us here:</ConstructionTextStyle>
       <Link label="YouTube" href={Links.youtube} />
       <Link label="Facebook" href={Links.facebook} />
       <Link label="Instagram" href={Links.instagram} />

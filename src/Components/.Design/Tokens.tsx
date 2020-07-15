@@ -1,6 +1,8 @@
 export const Colour = {
   green: "#61892f",
-  grey: "#cecece",
+  lightGrey: "#cecece",
+  mediumGrey: "#757575",
+  darkGrey: "#474747",
   white: "#f1f1f8",
 };
 
@@ -20,5 +22,6 @@ export const Font = {
 };
 
 export const Styling = {
-  roundedBorderMedium: "20px 20px 20px 20px",
+  roundedBorderSmall: "10px",
+  roundedBorderMedium: "20px",
 };
