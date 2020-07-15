@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
+import * as Tokens from "../Design/Tokens";
 
 const ConstructionTextStyle = styled.div`
-  font-size: 72px;
+  font-size: ${Tokens.Font.sizes.giant};
   text-align: center;
   margin-bottom: 10px;
   color: white;
