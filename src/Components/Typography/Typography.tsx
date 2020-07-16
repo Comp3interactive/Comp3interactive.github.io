@@ -33,6 +33,7 @@ export const StyledSubHeader = styled.div`
   font-weight: ${Tokens.Font.weight.bold};
   color: ${Tokens.Colour.green};
   text-align: center;
+  margin-bottom: 25px;
 `;
 
 export const StyledText = styled.div`
