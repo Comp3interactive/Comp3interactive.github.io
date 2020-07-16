@@ -3,6 +3,7 @@ import React from "react";
 import { Card } from "../Components/Card/Card";
 import { Header } from "../Components/Header/Header";
 import { Footer } from "../Components/Footer/Footer";
+import { TickerTape } from "../Components/TickerTape/TickerTape";
 
 import { Container, Row, Col } from "react-grid-system";
 import styled from "@emotion/styled";
@@ -16,6 +17,7 @@ const GridContainer = styled.div`
 export const ComponentPlayground = () => {
   return (
     <>
+      <TickerTape tickerText="Check out the latest videos" />
       <Header />
       <GridContainer>
         <Container fluid>
