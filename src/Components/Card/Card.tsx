@@ -62,14 +62,14 @@ const CardheaderImage = styled.img`
   max-height: 100%;
   border-radius: ${Tokens.Styling.roundedBorderSmall}
     ${Tokens.Styling.roundedBorderSmall} 0 0;
-  opacity: 0.4;
+  opacity: 0.2;
 `;
 
 const CardheaderImageContainer = styled.div`
   position: relative;
   text-align: center;
   color: white;
-  background: black;
+  background: ${Tokens.Colour.black};
   border-radius: ${Tokens.Styling.roundedBorderSmall}
     ${Tokens.Styling.roundedBorderSmall} 0 0;
   border-bottom: 3px solid ${Tokens.Colour.darkGrey};
