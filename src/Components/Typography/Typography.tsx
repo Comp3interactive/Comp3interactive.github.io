@@ -33,7 +33,6 @@ export const StyledSubHeader = styled.div`
   font-weight: ${Tokens.Font.weight.bold};
   color: ${Tokens.Colour.green};
   text-align: center;
-  margin-bottom: 25px;
 `;
 
 export const StyledText = styled.div`
@@ -62,4 +61,31 @@ export const StyledCardFooterText = styled.div`
   font-style: italic;
   color: ${Tokens.Colour.lightGrey};
   font-weight: ${Tokens.Font.weight.bold};
+`;
+
+export const StyledFooterLinkHeader = styled.div`
+  @media only screen and (max-width: 600px) {
+    text-align: center;
+  }
+
+  font-size: ${Tokens.Font.sizes.medium};
+  font-weight: ${Tokens.Font.weight.bold};
+  color: ${Tokens.Colour.white};
+  margin-bottom: 5px;
+  margin-top: 15px;
+`;
+
+export const StyledFooterLinks = styled.div`
+  @media only screen and (max-width: 600px) {
+    font-size: ${Tokens.Font.sizes.small};
+    text-align: center;
+  }
+
+  font-size: ${Tokens.Font.sizes.small};
+  color: ${Tokens.Colour.white};
+`;
+
+export const Copyright = styled.div`
+  font-size: ${Tokens.Font.sizes.tiny};
+  color: ${Tokens.Colour.lightGrey};
 `;

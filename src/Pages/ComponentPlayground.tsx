@@ -18,7 +18,7 @@ const GridContainer = styled.div`
 export const ComponentPlayground = () => {
   return (
     <>
-      {/* <TickerTape tickerText="Check out the latest videos" /> */}
+      <TickerTape tickerText="Check out the latest videos" />
       <Header />
       <GridContainer>
         <Container fluid>

@@ -28,7 +28,7 @@ export const Header = () => {
       <HeaderDiv>
         <HeaderWrapper>
           <ImageWrapper src="./Images/Bottlecaps/comp3.png" />
-          <Typo.StyledHeader>COMP-3 INTERACTIVE</Typo.StyledHeader>
+          <Typo.StyledHeader>TUTORIALS AND STUFF</Typo.StyledHeader>
           <Typo.StyledSubHeader>Subscribe.Follow.Learn()</Typo.StyledSubHeader>
         </HeaderWrapper>
       </HeaderDiv>
