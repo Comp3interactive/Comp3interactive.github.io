@@ -9,7 +9,7 @@ import {
 } from "../Typography/Typography";
 
 const FooterWrapper = styled.div`
-  background-color: ${Tokens.Colour.darkGrey};
+  background-color: ${Tokens.Colour.black};
   min-height: 200px;
   padding: 60px 10px 10px 10px;
 `;

@@ -13,6 +13,28 @@ export const ConstructionTextStyle = styled.div`
   -webkit-text-fill-color: transparent;
 `;
 
+export const StyledHeader = styled.div`
+  @media only screen and (max-width: 600px) {
+    font-size: ${Tokens.Font.sizes.large};
+  }
+
+  font-size: ${Tokens.Font.sizes.xl};
+  font-weight: ${Tokens.Font.weight.bold};
+  color: ${Tokens.Colour.white};
+  text-align: center;
+`;
+
+export const StyledSubHeader = styled.div`
+  @media only screen and (max-width: 600px) {
+    font-size: ${Tokens.Font.sizes.small};
+  }
+
+  font-size: ${Tokens.Font.sizes.medium};
+  font-weight: ${Tokens.Font.weight.bold};
+  color: ${Tokens.Colour.green};
+  text-align: center;
+`;
+
 export const StyledText = styled.div`
   font-size: ${Tokens.Font.sizes.medium};
   color: ${Tokens.Colour.darkGrey};

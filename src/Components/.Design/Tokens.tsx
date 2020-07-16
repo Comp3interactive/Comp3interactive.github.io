@@ -1,8 +1,10 @@
 export const Colour = {
   green: "#61892f",
-  lightGrey: "#cecece",
-  mediumGrey: "#757575",
-  darkGrey: "#474747",
+  darkGreen: "#577A2C",
+  lightGrey: "#DBDBDB",
+  mediumGrey: "#4D5061",
+  darkGrey: "#232528",
+  black: "#0D1B1E",
   white: "#f1f1f8",
 };
 
@@ -16,8 +18,7 @@ export const Font = {
     small: "16px",
     medium: "22px",
     large: "32px",
-    xl: "52px",
-    giant: "72px",
+    xl: "5vw",
   },
 };
 

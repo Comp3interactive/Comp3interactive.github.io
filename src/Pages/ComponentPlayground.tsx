@@ -7,6 +7,7 @@ import { TickerTape } from "../Components/TickerTape/TickerTape";
 
 import { Container, Row, Col } from "react-grid-system";
 import styled from "@emotion/styled";
+import * as Tokens from "../Components/.Design/Tokens";
 
 const GridContainer = styled.div`
   display: block;
@@ -17,7 +18,7 @@ const GridContainer = styled.div`
 export const ComponentPlayground = () => {
   return (
     <>
-      <TickerTape tickerText="Check out the latest videos" />
+      {/* <TickerTape tickerText="Check out the latest videos" /> */}
       <Header />
       <GridContainer>
         <Container fluid>

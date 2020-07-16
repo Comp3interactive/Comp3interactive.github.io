@@ -8,7 +8,7 @@ export interface TickerProps {
 }
 
 const TickerWrapper = styled.div`
-  background-color: black;
+  background-color: ${Tokens.Colour.black};
   text-align: center;
   color: ${Tokens.Colour.white};
 `;

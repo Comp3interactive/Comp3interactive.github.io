@@ -44,14 +44,14 @@ const LinkBoxWrapper = styled.a`
 
 const CardBody = styled.div`
   min-height: 200px;
-  background-color: ${Tokens.Colour.white};
+  background-color: ${Tokens.Colour.lightGrey};
   padding: 20px;
 `;
 
 const CardFooter = styled.div`
   border-radius: 0 0 ${Tokens.Styling.roundedBorderSmall}
     ${Tokens.Styling.roundedBorderSmall};
-  background-color: ${Tokens.Colour.darkGrey};
+  background-color: ${Tokens.Colour.black};
   padding: 10px;
   text-align: right;
   min-height: 15px;
