@@ -6,7 +6,7 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Switch>
         <Route path="/" exact component={UnderConstruction} />
         <Route path="/Playground" exact component={ComponentPlayground} />
