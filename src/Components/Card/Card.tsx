@@ -9,9 +9,9 @@ import {
 } from "../Typography/Typography";
 
 export interface CardProps {
-  header: string;
-  subheader: string;
-  body: string;
+  header?: string;
+  subheader?: string;
+  body: string[];
   cardImageURL: string;
   href?: string;
   footerText?: string;
@@ -102,7 +102,9 @@ export const Card = ({
         <CardBody>
           <StyledCardSubtitleText>{subheader}</StyledCardSubtitleText>
           <br />
-          <StyledCardBodyText>{body}</StyledCardBodyText>
+          {body.map((paragraph, i) => (
+            <StyledCardBodyText key={i}>{paragraph}</StyledCardBodyText>
+          ))}
         </CardBody>
         <CardFooter>
           <StyledCardFooterText>{footerText}</StyledCardFooterText>

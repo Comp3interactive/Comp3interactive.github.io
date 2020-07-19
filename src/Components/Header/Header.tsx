@@ -28,8 +28,7 @@ export const Header = () => {
       <HeaderDiv>
         <HeaderWrapper>
           <ImageWrapper src="./Images/Bottlecaps/comp3.png" />
-          <Typo.StyledHeader>TUTORIALS AND STUFF</Typo.StyledHeader>
-          <Typo.StyledSubHeader>Subscribe.Follow.Learn()</Typo.StyledSubHeader>
+          <Typo.StyledHeader>Subscribe.Follow.Learn()</Typo.StyledHeader>
         </HeaderWrapper>
       </HeaderDiv>
     </>

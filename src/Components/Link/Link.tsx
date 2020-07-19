@@ -5,24 +5,21 @@ import * as Tokens from "../.Design/Tokens";
 export interface LinkProps {
   label: string;
   href: string;
+  color?: string;
 }
 
-const LinkContainer = styled.div`
-  text-align: center;
-`;
-
-const StyledLink = styled.a`
-  font-size: ${Tokens.Font.sizes.medium};
-  margin-bottom: 10px;
-  color: ${Tokens.Colour.green};
-  margin-top: 20px;
+const StyledLink = styled.a<LinkProps>`
+  font-size: ${Tokens.Font.sizes.small};
+  color: ${(props) => (props.color ? props.color : Tokens.Colour.white)};
   text-decoration: none;
 `;
 
-export const Link = ({ label, href }: LinkProps) => {
+export const Link = ({ label, href, color }: LinkProps) => {
   return (
-    <LinkContainer>
-      <StyledLink href={href}>{label}</StyledLink>
-    </LinkContainer>
+    <div>
+      <StyledLink color={color} href={href} label={label}>
+        {label}
+      </StyledLink>
+    </div>
   );
 };

@@ -22,6 +22,8 @@ export const StyledHeader = styled.div`
   font-weight: ${Tokens.Font.weight.bold};
   color: ${Tokens.Colour.white};
   text-align: center;
+
+  text-shadow: 3px 3px #000000;
 `;
 
 export const StyledSubHeader = styled.div`
@@ -44,6 +46,7 @@ export const StyledCardHeaderText = styled.div`
   font-size: ${Tokens.Font.sizes.large};
   font-weight: ${Tokens.Font.weight.bold};
   color: ${Tokens.Colour.white};
+  text-align: center;
 `;
 
 export const StyledCardSubtitleText = styled.div`
@@ -54,6 +57,7 @@ export const StyledCardSubtitleText = styled.div`
 export const StyledCardBodyText = styled.div`
   font-size: ${Tokens.Font.sizes.small};
   color: ${Tokens.Colour.mediumGrey};
+  padding: 5px 0 5px 0;
 `;
 
 export const StyledCardFooterText = styled.div`
@@ -83,6 +87,7 @@ export const StyledFooterLinks = styled.div`
 
   font-size: ${Tokens.Font.sizes.small};
   color: ${Tokens.Colour.white};
+  text-decoration: none;
 `;
 
 export const Copyright = styled.div`
