@@ -4,8 +4,8 @@ import "./App.css";
 import { Home } from "./Pages/Home";
 import { DevLogs } from "./Pages/DevLogs";
 import { SupportUs } from "./Pages/SupportUs";
+import { FourZeroFour } from "./Pages/404";
 // WIP
-import { UnderConstruction } from "./Pages/UnderConstruction";
 import { ComponentPlayground } from "./Pages/ComponentPlayground";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -17,6 +17,7 @@ function App() {
         <Route path={"/Playground"} component={ComponentPlayground} />
         <Route path={"/Devlogs"} component={DevLogs} />
         <Route path={"/SupportUs"} component={SupportUs} />
+        <Route component={FourZeroFour} />
       </Switch>
     </Router>
   );
