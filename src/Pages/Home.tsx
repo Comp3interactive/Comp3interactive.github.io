@@ -17,7 +17,7 @@ export const Home = () => {
     <>
       <Navbar />
 
-      <Header />
+      <Header headerText={"Subscribe.Follow.Learn()"} />
 
       <Container>
         <Row nogutter>

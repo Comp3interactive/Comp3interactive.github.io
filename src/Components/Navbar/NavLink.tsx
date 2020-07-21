@@ -5,6 +5,7 @@ import * as Tokens from "../.Design/Tokens";
 export interface NavLinkProps {
   href?: string;
   label?: string;
+  onClick?: () => void;
 }
 
 const StyledNavLink = styled.button<NavLinkProps>`
@@ -27,10 +28,10 @@ const StyledNavLink = styled.button<NavLinkProps>`
   }
 `;
 
-export const NavLink: React.FC<NavLinkProps> = ({ href, label }) => {
+export const NavLink: React.FC<NavLinkProps> = ({ href, label, onClick }) => {
   const StyledButtonOut = StyledNavLink.withComponent("a");
   return (
-    <StyledButtonOut href={href} label={label}>
+    <StyledButtonOut href={href} label={label} onClick={onClick}>
       {label}
     </StyledButtonOut>
   );

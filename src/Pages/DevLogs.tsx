@@ -17,7 +17,7 @@ export const DevLogs = () => {
     <>
       <Navbar />
 
-      <Header />
+      <Header headerText={"Dev.Logs()"} />
 
       <Container>
         <Row nogutter>

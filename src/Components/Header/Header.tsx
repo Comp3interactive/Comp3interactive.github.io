@@ -4,6 +4,10 @@ import * as Tokens from "../.Design/Tokens";
 import { HeaderDiv } from "../DivBoxes/DivBox";
 import * as Typo from "../Typography/Typography";
 
+export interface HeaderProps {
+  headerText: string;
+}
+
 const HeaderWrapper = styled.div`
   min-height: 100px;
   padding: 25px 10px 10px 10px;
@@ -18,13 +22,13 @@ const ImageWrapper = styled.img`
   width: 250px;
 `;
 
-export const Header = () => {
+export const Header = ({ headerText }: HeaderProps) => {
   return (
     <>
       <HeaderDiv>
         <HeaderWrapper>
           <ImageWrapper src="./Images/Bottlecaps/comp3.png" />
-          <Typo.StyledHeader>Subscribe.Follow.Learn()</Typo.StyledHeader>
+          <Typo.StyledHeader>{headerText}</Typo.StyledHeader>
         </HeaderWrapper>
       </HeaderDiv>
     </>

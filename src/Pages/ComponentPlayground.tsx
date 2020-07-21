@@ -18,7 +18,7 @@ export const ComponentPlayground = () => {
     <>
       <Navbar />
 
-      <Header />
+      <Header headerText={"Component.Playground()"} />
 
       <Container>
         <Row nogutter>

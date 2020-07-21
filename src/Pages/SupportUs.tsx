@@ -16,7 +16,7 @@ export const SupportUs = () => {
     <>
       <Navbar />
 
-      <Header />
+      <Header headerText={"Support.Us()"} />
 
       <Container>
         <Row nogutter>

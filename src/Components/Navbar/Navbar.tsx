@@ -5,6 +5,7 @@ import * as Typo from "../Typography/Typography";
 import { Button } from "../Button/Button";
 import * as Icons from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "../Navbar/NavLink";
+import onClickOutside from "react-onclickoutside";
 
 const NavbarWrapper = styled.nav`
   display: flex;
@@ -75,11 +76,41 @@ export const Navbar = () => {
         </Toggle>
         {isOpen ? (
           <InnerNavBar>
-            <NavLink label={"Home"} href={"/#/"} />
-            <NavLink label={"Development Logs"} href={"/#/DevLogs"} />
-            <NavLink label={"Asset Collections"} />
-            <NavLink label={"Support Us"} href={"/#/SupportUs"} />
-            <NavLink label={"Contact"} />
+            <NavLink
+              label={"Home"}
+              href={"/#/"}
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            />
+            <NavLink
+              label={"Development Logs"}
+              href={"/#/DevLogs"}
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            />
+            <NavLink
+              label={"Asset Collections"}
+              href={"/#/Assets"}
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            />
+            <NavLink
+              label={"Support Us"}
+              href={"/#/SupportUs"}
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            />
+            <NavLink
+              label={"Contact Us"}
+              href={"/#/Contact"}
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            />
           </InnerNavBar>
         ) : null}
       </NavbarWrapper>

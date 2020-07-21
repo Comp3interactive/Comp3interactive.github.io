@@ -10,13 +10,13 @@ import * as Divs from "../Components/DivBoxes/DivBox";
 
 import { Navbar } from "../Components/Navbar/Navbar";
 
-export const ComponentPlayground = () => {
+export const AssetCollections = () => {
   setConfiguration({ maxScreenClass: "lg" });
   return (
     <>
       <Navbar />
 
-      <Header headerText={"Some.Header()"} />
+      <Header headerText={"Asset.Collections()"} />
 
       <Container>
         <Row nogutter>
