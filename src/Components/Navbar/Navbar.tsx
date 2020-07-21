@@ -18,8 +18,7 @@ const NavbarWrapper = styled.nav`
   background-color: ${Tokens.Colour.black};
   color: ${Tokens.Colour.white};
   height: 50px;
-  scroll-padding-top: 50px;
-  z-index: 2;
+  z-index: 9999;
 
   border-bottom: 1px solid ${Tokens.Colour.darkGreen};
 `;
@@ -64,7 +63,7 @@ export const Navbar = () => {
     <>
       <NavbarWrapper>
         <Brand>
-          <Typo.Navbar>Comp-3 Interactive</Typo.Navbar>
+          <Typo.Navbar>Comp-3 Interactive TEST</Typo.Navbar>
         </Brand>
         <Toggle>
           <Button
