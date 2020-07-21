@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 import styled from "@emotion/styled";
 import * as Tokens from "../.Design/Tokens";
 import * as Typo from "../Typography/Typography";
@@ -61,6 +61,33 @@ const Toggle = styled.div`
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
+
+  useOnClickOutside(ref, () => setIsOpen(false));
+
+  function useOnClickOutside(
+    ref: React.MutableRefObject<HTMLDivElement>,
+    handler: { (): void; (arg0: any): void }
+  ) {
+    useEffect(() => {
+      const listener = (event: { target: any }) => {
+        if (!ref.current || ref.current.contains(event.target)) {
+          return;
+        }
+
+        handler(event);
+      };
+
+      document.addEventListener("mousedown", listener);
+      document.addEventListener("touchstart", listener);
+
+      return () => {
+        document.removeEventListener("mousedown", listener);
+        document.removeEventListener("touchstart", listener);
+      };
+    }, [ref, handler]);
+  }
+
   return (
     <>
       <NavbarWrapper>
@@ -74,7 +101,7 @@ export const Navbar = () => {
           />
         </Toggle>
         {isOpen ? (
-          <InnerNavBar>
+          <InnerNavBar ref={ref}>
             <NavLink
               label={"Home"}
               href={"/#/"}
@@ -99,13 +126,6 @@ export const Navbar = () => {
             <NavLink
               label={"Support Us"}
               href={"/#/SupportUs"}
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            />
-            <NavLink
-              label={"Contact Us"}
-              href={"/#/Contact"}
               onClick={() => {
                 setIsOpen(false);
               }}

@@ -9,7 +9,7 @@ import * as Tokens from "../Components/.Design/Tokens";
 import * as Divs from "../Components/DivBoxes/DivBox";
 
 import { Navbar } from "../Components/Navbar/Navbar";
-import { DevLog } from "../Components/Card/DevLog";
+import { Panel } from "../Components/Card/Panel";
 import { Button } from "../Components/Button/Button";
 import styled from "@emotion/styled";
 
@@ -40,7 +40,7 @@ export const FourZeroFour = () => {
         </Row>
         <Row nogutter>
           <Col>
-            <DevLog
+            <Panel
               header={"Uh oh..."}
               date={"Are you lost?"}
               body={[

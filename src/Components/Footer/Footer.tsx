@@ -36,7 +36,7 @@ const IconWrapper = styled.div`
 `;
 
 const LinkWrapper = styled.a`
-  color: white;
+  color: ${Tokens.Colour.white};
   padding: 10px;
 `;
 

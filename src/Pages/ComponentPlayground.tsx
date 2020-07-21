@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Card } from "../Components/Card/Card";
-import { DevLog } from "../Components/Card/DevLog";
+import { Panel } from "../Components/Card/Panel";
 import { Header } from "../Components/Header/Header";
 import { Footer } from "../Components/Footer/Footer";
 
@@ -179,7 +179,7 @@ export const ComponentPlayground = () => {
       <Container>
         <Row>
           <Col>
-            <DevLog
+            <Panel
               header={"Test dev log"}
               date={"30/11/1990"}
               body={["Test body paragraph", "Another body paragraph"]}
@@ -188,7 +188,7 @@ export const ComponentPlayground = () => {
         </Row>
         <Row>
           <Col>
-            <DevLog
+            <Panel
               header={"Another dev log"}
               date={"30/11/2020"}
               body={["Test body paragraph", "Another body paragraph"]}

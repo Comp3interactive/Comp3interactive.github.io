@@ -12,7 +12,6 @@ const HeaderWrapper = styled.div`
   min-height: 100px;
   padding: 25px 10px 10px 10px;
   margin-top: 75px;
-  margin-bottom: 50px;
 `;
 
 const ImageWrapper = styled.img`

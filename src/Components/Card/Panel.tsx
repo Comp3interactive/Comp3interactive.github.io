@@ -5,8 +5,8 @@ import * as Typo from "../Typography/Typography";
 
 export interface CardProps {
   header: string;
-  date: string;
-  body: string[];
+  date?: string;
+  body: any[];
 }
 
 interface CircleProps {
@@ -51,7 +51,7 @@ const Circle = styled.div<CircleProps>`
   background-color: ${(props) => props.color};
 `;
 
-export const DevLog = ({ header, date, body }: CardProps) => {
+export const Panel = ({ header, date, body }: CardProps) => {
   return (
     <CardContainer>
       <CardHeader>
@@ -61,7 +61,7 @@ export const DevLog = ({ header, date, body }: CardProps) => {
         <Typo.DevLogDate>{date}</Typo.DevLogDate>
       </CardHeader>
       <CardBody>
-        <Typo.StyledCardSubtitleText>{`Dev.Log('${header}');`}</Typo.StyledCardSubtitleText>
+        <Typo.StyledCardSubtitleText>{header}</Typo.StyledCardSubtitleText>
         <br />
         {body.map((paragraph, i) => (
           <Typo.StyledCardBodyText key={i}>{paragraph}</Typo.StyledCardBodyText>

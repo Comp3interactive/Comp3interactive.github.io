@@ -9,7 +9,7 @@ import * as Tokens from "../Components/.Design/Tokens";
 import * as Divs from "../Components/DivBoxes/DivBox";
 
 import { Navbar } from "../Components/Navbar/Navbar";
-import { DevLog } from "../Components/Card/DevLog";
+import { Panel } from "../Components/Card/Panel";
 
 export const DevLogs = () => {
   setConfiguration({ maxScreenClass: "lg" });
@@ -22,7 +22,7 @@ export const DevLogs = () => {
       <Container>
         <Row nogutter>
           <Col>
-            <DevLog
+            <Panel
               header={"My first devlog"}
               date={"30/11/1990"}
               body={[
