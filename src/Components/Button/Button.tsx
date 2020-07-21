@@ -5,11 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 export interface ButtonProps {
-  href: string;
-  label: string;
+  href?: string;
+  label?: string;
   width?: string;
   full?: boolean;
   icon?: IconDefinition;
+  onClick?: () => void;
 }
 
 const StyledPrimaryButton = styled.button<ButtonProps>`
@@ -41,6 +42,7 @@ export const Button: React.FC<ButtonProps> = ({
   width,
   full,
   icon,
+  onClick,
 }) => {
   const StyledButtonOut = StyledPrimaryButton.withComponent("a");
   return (
@@ -50,10 +52,11 @@ export const Button: React.FC<ButtonProps> = ({
       icon={icon}
       full={full}
       width={width}
+      onClick={onClick}
     >
       {icon ? (
         <>
-          <FontAwesomeIcon icon={icon} /> &nbsp; {label}
+          <FontAwesomeIcon icon={icon} /> {label ? <>&nbsp; {label}</> : null}
         </>
       ) : (
         label

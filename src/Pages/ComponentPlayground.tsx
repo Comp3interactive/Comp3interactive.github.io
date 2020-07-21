@@ -4,17 +4,19 @@ import { Card } from "../Components/Card/Card";
 import { Header } from "../Components/Header/Header";
 import { Footer } from "../Components/Footer/Footer";
 
-import { Container, Row, Col } from "react-grid-system";
+import { Container, Row, Col, setConfiguration } from "react-grid-system";
 import * as Tokens from "../Components/.Design/Tokens";
 
 import * as Divs from "../Components/DivBoxes/DivBox";
 
-import { CustomNavbar } from "../Components/Navbar/CustomNavbar";
+import { Navbar } from "../Components/Navbar/Navbar";
 
 export const ComponentPlayground = () => {
+  setConfiguration({ maxScreenClass: "lg" });
   return (
     <>
-      <CustomNavbar />
+      <Navbar />
+
       <Header />
 
       <Container>
