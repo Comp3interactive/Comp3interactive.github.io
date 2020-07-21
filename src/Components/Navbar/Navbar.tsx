@@ -18,6 +18,7 @@ const NavbarWrapper = styled.nav`
   background-color: ${Tokens.Colour.black};
   color: ${Tokens.Colour.white};
   height: 50px;
+  scroll-padding-top: 50px;
   z-index: 2;
 
   border-bottom: 1px solid ${Tokens.Colour.darkGreen};
