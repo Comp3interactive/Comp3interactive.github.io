@@ -5,7 +5,6 @@ import * as Typo from "../Typography/Typography";
 import { Button } from "../Button/Button";
 import * as Icons from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "../Navbar/NavLink";
-import onClickOutside from "react-onclickoutside";
 
 const NavbarWrapper = styled.nav`
   display: flex;
