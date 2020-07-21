@@ -75,16 +75,10 @@ export const Navbar = () => {
         </Toggle>
         {isOpen ? (
           <InnerNavBar>
-            <NavLink label={"Home"} href={process.env.PUBLIC_URL + "/"} />
-            <NavLink
-              label={"Development Logs"}
-              href={process.env.PUBLIC_URL + "/DevLogs"}
-            />
+            <NavLink label={"Home"} href={"/#/"} />
+            <NavLink label={"Development Logs"} href={"/#/DevLogs"} />
             <NavLink label={"Asset Collections"} />
-            <NavLink
-              label={"Support Us"}
-              href={process.env.PUBLIC_URL + "/SupportUs"}
-            />
+            <NavLink label={"Support Us"} href={"/#/SupportUs"} />
             <NavLink label={"Contact"} />
           </InnerNavBar>
         ) : null}
