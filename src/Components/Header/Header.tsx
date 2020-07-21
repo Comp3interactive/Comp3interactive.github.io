@@ -7,12 +7,8 @@ import * as Typo from "../Typography/Typography";
 const HeaderWrapper = styled.div`
   min-height: 100px;
   padding: 25px 10px 10px 10px;
-  margin-top: 30px;
+  margin-top: 75px;
   margin-bottom: 50px;
-`;
-
-const HeaderTop = styled.div`
-  background-color: ${Tokens.Colour.black};
 `;
 
 const ImageWrapper = styled.img`

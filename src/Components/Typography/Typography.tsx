@@ -21,7 +21,7 @@ export const Navbar = styled.div`
 
 export const StyledHeader = styled.div`
   @media only screen and (max-width: 600px) {
-    font-size: ${Tokens.Font.sizes.large};
+    font-size: ${Tokens.Font.sizes.medium};
   }
 
   font-size: ${Tokens.Font.sizes.xl};
@@ -97,6 +97,11 @@ export const StyledFooterLinks = styled.div`
 `;
 
 export const Copyright = styled.div`
+  font-size: ${Tokens.Font.sizes.tiny};
+  color: ${Tokens.Colour.lightGrey};
+`;
+
+export const DevLogDate = styled.div`
   font-size: ${Tokens.Font.sizes.tiny};
   color: ${Tokens.Colour.lightGrey};
 `;
