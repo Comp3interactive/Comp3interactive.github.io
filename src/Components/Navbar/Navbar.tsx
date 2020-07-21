@@ -34,14 +34,15 @@ const InnerNavBar = styled.div`
   margin-top: 50px;
   padding: 25px;
 
-  -webkit-box-shadow: inset 0px 62px 16px -57px rgba(13, 27, 30, 0.75);
-  -moz-box-shadow: inset 0px 62px 16px -57px rgba(13, 27, 30, 0.75);
-  box-shadow: inset 0px 62px 16px -57px rgba(13, 27, 30, 0.75);
+  border-bottom: 1px solid ${Tokens.Colour.darkGreen};
+  -webkit-box-shadow: 0px 29px 28px 7px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 29px 28px 7px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 29px 28px 7px rgba(0, 0, 0, 0.5);
 `;
 
 const Brand = styled.div`
   @media only screen and (max-width: 600px) {
-    padding-left: 5px;
+    padding-left: 15px;
   }
 
   padding-left: 50px;
@@ -62,7 +63,7 @@ export const Navbar = () => {
     <>
       <NavbarWrapper>
         <Brand>
-          <strong>Comp-3 Interactive</strong>
+          <Typo.Navbar>Comp-3 Interactive</Typo.Navbar>
         </Brand>
         <Toggle>
           <Button

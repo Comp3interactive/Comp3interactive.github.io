@@ -13,6 +13,12 @@ export const ConstructionTextStyle = styled.div`
   -webkit-text-fill-color: transparent;
 `;
 
+export const Navbar = styled.div`
+  font-size: ${Tokens.Font.sizes.medium};
+  font-weight: ${Tokens.Font.weight.bold};
+  color: ${Tokens.Colour.white};
+`;
+
 export const StyledHeader = styled.div`
   @media only screen and (max-width: 600px) {
     font-size: ${Tokens.Font.sizes.large};
