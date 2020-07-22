@@ -5,7 +5,6 @@ import {
   StyledCardSubtitleText,
   StyledCardHeaderText,
   StyledCardBodyText,
-  StyledCardFooterText,
 } from "../Typography/Typography";
 
 export interface PanelProps {

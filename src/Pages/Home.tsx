@@ -48,9 +48,7 @@ export const Home = () => {
         <Container>
           <Row nogutter>
             <Col>
-              <Typo.StyledCardHeaderText>
-                Where can you find us?
-              </Typo.StyledCardHeaderText>
+              <Typo.MainHeader>Where can you find us?</Typo.MainHeader>
               <Space height={30} />
             </Col>
           </Row>
@@ -92,10 +90,8 @@ export const Home = () => {
       <Container>
         <Row nogutter>
           <Col>
-            <Typo.StyledCardHeaderText>
-              Do we make games?
-            </Typo.StyledCardHeaderText>
-            <Space height={30} />
+            <Typo.MainHeader>Do we make games?</Typo.MainHeader>
+            <Space height={20} />
           </Col>
         </Row>
         <Row nogutter>
@@ -105,7 +101,8 @@ export const Home = () => {
               date={Content.devlogBar.date}
               body={Content.devlogBar.body}
               buttonText={"Check Out What We're Up To"}
-              buttonHref={Links.youtube}
+              buttonHref={"/#/Devlogs"}
+              imgUrl="./Images/Illustrations/devlog.png"
             />
           </Col>
         </Row>
@@ -115,9 +112,7 @@ export const Home = () => {
         <Container>
           <Row nogutter>
             <Col>
-              <Typo.StyledCardHeaderText>
-                What do we have for you?
-              </Typo.StyledCardHeaderText>
+              <Typo.MainHeader>What do we have for you?</Typo.MainHeader>
               <Space height={30} />
             </Col>
           </Row>

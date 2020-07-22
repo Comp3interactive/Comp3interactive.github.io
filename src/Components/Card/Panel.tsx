@@ -12,6 +12,7 @@ export interface CardProps {
   buttonText?: string;
   buttonHref?: string;
   buttonIcon?: IconDefinition;
+  imgUrl?: string;
 }
 
 interface CircleProps {
@@ -58,6 +59,18 @@ const Circle = styled.div<CircleProps>`
   background-color: ${(props) => props.color};
 `;
 
+const StyledImage = styled.img`
+  max-width: 30%;
+  max-height: 30%;
+  padding-bottom: 10px;
+  border-radius: ${Tokens.Styling.roundedBorderSmall}
+    ${Tokens.Styling.roundedBorderSmall} 0 0;
+`;
+const CardheaderImageContainer = styled.div`
+  position: relative;
+  text-align: center;
+`;
+
 export const Panel = ({
   header,
   date,
@@ -65,6 +78,7 @@ export const Panel = ({
   buttonText,
   buttonHref,
   buttonIcon,
+  imgUrl,
 }: CardProps) => {
   return (
     <CardContainer>
@@ -83,6 +97,11 @@ export const Panel = ({
           <Typo.StyledCardBodyText key={i}>{paragraph}</Typo.StyledCardBodyText>
         ))}
         <br />
+        {imgUrl ? (
+          <CardheaderImageContainer>
+            <StyledImage src={imgUrl} />
+          </CardheaderImageContainer>
+        ) : null}
         {buttonText ? (
           <Button
             label={buttonText}

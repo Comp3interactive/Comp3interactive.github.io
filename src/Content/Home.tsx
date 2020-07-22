@@ -34,7 +34,7 @@ export const Content = {
         "Primarily we bring quality YouTube tutorials revolving mainly around the Unity3D game engine. These tutorials can range from general hints and tips to utilities to full game creation series! Just like out latest Let's Make series... Let's Make: Invaders from Outerspace! Where we recreate the classic arcade game Space Invaders!",
         "Occasionally we also put some relaxing pixel art speed paintings on our channel or even some pixel art tips to help your 2D retro game workflow.",
       ],
-      cardImageURL: "./Images/TestImage.jpeg",
+      cardImageURL: "./Images/Illustrations/youtube.png",
       href: Links.youtube,
       footerText: "Learn More →",
     },
@@ -45,7 +45,7 @@ export const Content = {
         "Facebook is one of the places Comp-3 Interactive began. We started small and offered up some bite-sized tips for common Unity related issues and questions.",
         "Since growing and expanding, we now use Facebook to request feedback from the community, what kind of videos you enjoy watching, what are the pro's and con's of covering specific topics... We even take reccomendations as to what kinds of things you'd like us to cover in future videos!",
       ],
-      cardImageURL: "./Images/TestImage.jpeg",
+      cardImageURL: "./Images/Illustrations/facebook.png",
       href: Links.facebook,
       footerText: "Learn More →",
     },
@@ -55,7 +55,7 @@ export const Content = {
       body: [
         "Another starting point for Comp-3 Interactive. This is where the first tip was posted all those months ago! We still post hints and tips over on Instagram, the occasional peek into my own personal life through the stories and maybe even a meme or two!",
       ],
-      cardImageURL: "./Images/TestImage.jpeg",
+      cardImageURL: "./Images/Illustrations/instagram.png",
       href: Links.instagram,
       footerText: "Learn More →",
     },
@@ -65,9 +65,9 @@ export const Content = {
       body: [
         "Want to chill out and have a chat with fellow devs? Head on over to our Discord server! There's a lot of extremely helpful people over there if you're having trouble, we also have showcase channels to show off your current projects or maybe you just want to chat and share memes? We don't care what you do in there, just be nice!",
       ],
-      cardImageURL: "./Images/TestImage.jpeg",
+      cardImageURL: "./Images/Illustrations/discord.png",
       href: Links.discord,
-      footerText: "Learn More →",
+      footerText: "Join Us →",
     },
     assets: {
       header: "Dev Assets",
@@ -75,9 +75,9 @@ export const Content = {
       body: [
         "Check out our latest collections of free and paid game development assets. Sprites and UI assets are over on our Itch.io page whereas code snippets and utilities are on our GitHub page.",
       ],
-      cardImageURL: "./Images/TestImage.jpeg",
-      href: Links.discord,
-      footerText: "Learn More →",
+      cardImageURL: "./Images/Illustrations/assets.png",
+      href: "/#/Assets",
+      footerText: "Download →",
     },
     support: {
       header: "Support Us",
@@ -85,9 +85,9 @@ export const Content = {
       body: [
         "Check out how you can help us grow and expand to bring you even more quality content!",
       ],
-      cardImageURL: "./Images/TestImage.jpeg",
-      href: Links.discord,
-      footerText: "Learn More →",
+      cardImageURL: "./Images/Illustrations/support.png",
+      href: "/#/SupportUs",
+      footerText: "Support Us →",
     },
   },
 };

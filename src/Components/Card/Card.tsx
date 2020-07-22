@@ -58,18 +58,18 @@ const CardFooter = styled.div`
 `;
 
 const CardheaderImage = styled.img`
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 50%;
+  max-height: 50%;
+  padding: 10px;
   border-radius: ${Tokens.Styling.roundedBorderSmall}
     ${Tokens.Styling.roundedBorderSmall} 0 0;
-  opacity: 0.2;
 `;
 
 const CardheaderImageContainer = styled.div`
   position: relative;
   text-align: center;
   color: white;
-  background: ${Tokens.Colour.black};
+  background: ${Tokens.Colour.white};
   border-radius: ${Tokens.Styling.roundedBorderSmall}
     ${Tokens.Styling.roundedBorderSmall} 0 0;
   border-bottom: 3px solid ${Tokens.Colour.darkGrey};
@@ -95,11 +95,10 @@ export const Card = ({
       <LinkBoxWrapper href={href}>
         <CardheaderImageContainer>
           <CardheaderImage src={cardImageURL} />
-          <TextWrapper>
-            <StyledCardHeaderText>{header}</StyledCardHeaderText>
-          </TextWrapper>
         </CardheaderImageContainer>
         <CardBody>
+          <StyledCardHeaderText>{header}</StyledCardHeaderText>
+          <br />
           <StyledCardSubtitleText>{subheader}</StyledCardSubtitleText>
           <br />
           {body.map((paragraph, i) => (

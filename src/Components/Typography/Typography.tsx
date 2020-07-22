@@ -48,16 +48,24 @@ export const StyledText = styled.div`
   color: ${Tokens.Colour.darkGrey};
 `;
 
-export const StyledCardHeaderText = styled.div`
+export const MainHeader = styled.h1`
   font-size: ${Tokens.Font.sizes.large};
   font-weight: ${Tokens.Font.weight.bold};
   color: ${Tokens.Colour.white};
   text-align: center;
 `;
 
+export const StyledCardHeaderText = styled.div`
+  font-size: ${Tokens.Font.sizes.large};
+  font-weight: ${Tokens.Font.weight.bold};
+  color: ${Tokens.Colour.darkGreen};
+  text-align: center;
+`;
+
 export const StyledCardSubtitleText = styled.div`
   font-size: ${Tokens.Font.sizes.medium};
   color: ${Tokens.Colour.darkGrey};
+  text-align: center;
 `;
 
 export const StyledCardBodyText = styled.div`
