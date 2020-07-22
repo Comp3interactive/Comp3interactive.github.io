@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "@emotion/styled";
 import * as Tokens from "../.Design/Tokens";
 import * as Typo from "../Typography/Typography";

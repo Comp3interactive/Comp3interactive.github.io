@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import * as Tokens from "../.Design/Tokens";
 import { HeaderDiv } from "../DivBoxes/DivBox";
 import * as Typo from "../Typography/Typography";
 

@@ -102,6 +102,7 @@ export const Copyright = styled.div`
 `;
 
 export const DevLogDate = styled.div`
+  padding-right: 10px;
   font-size: ${Tokens.Font.sizes.tiny};
   color: ${Tokens.Colour.lightGrey};
 `;

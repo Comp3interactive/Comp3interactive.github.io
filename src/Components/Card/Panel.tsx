@@ -37,6 +37,7 @@ const CardBody = styled.div`
 
 const CardHeader = styled.div`
   display: flex;
+  justify-content: space-between;
   margin-top: 10px;
   padding: 5px;
   border-radius: ${Tokens.Styling.roundedBorderSmall}
@@ -44,6 +45,7 @@ const CardHeader = styled.div`
 `;
 
 const Circle = styled.div<CircleProps>`
+  display: inline-block;
   border-radius: 20px 20px 20px 20px;
   margin-left: 10px;
   height: 13px;
@@ -55,9 +57,11 @@ export const Panel = ({ header, date, body }: CardProps) => {
   return (
     <CardContainer>
       <CardHeader>
-        <Circle color="#FF605C" />
-        <Circle color="#FFBD44" />
-        <Circle color="#00CA4E" />
+        <div>
+          <Circle color="#FF605C" />
+          <Circle color="#FFBD44" />
+          <Circle color="#00CA4E" />
+        </div>
         <Typo.DevLogDate>{date}</Typo.DevLogDate>
       </CardHeader>
       <CardBody>
