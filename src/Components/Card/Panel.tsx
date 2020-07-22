@@ -2,11 +2,16 @@ import React from "react";
 import styled from "@emotion/styled";
 import * as Tokens from "../.Design/Tokens";
 import * as Typo from "../Typography/Typography";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { Button } from "../Button/Button";
 
 export interface CardProps {
   header: string;
   date?: string;
   body: any[];
+  buttonText?: string;
+  buttonHref?: string;
+  buttonIcon?: IconDefinition;
 }
 
 interface CircleProps {
@@ -53,7 +58,14 @@ const Circle = styled.div<CircleProps>`
   background-color: ${(props) => props.color};
 `;
 
-export const Panel = ({ header, date, body }: CardProps) => {
+export const Panel = ({
+  header,
+  date,
+  body,
+  buttonText,
+  buttonHref,
+  buttonIcon,
+}: CardProps) => {
   return (
     <CardContainer>
       <CardHeader>
@@ -70,6 +82,15 @@ export const Panel = ({ header, date, body }: CardProps) => {
         {body.map((paragraph, i) => (
           <Typo.StyledCardBodyText key={i}>{paragraph}</Typo.StyledCardBodyText>
         ))}
+        <br />
+        {buttonText ? (
+          <Button
+            label={buttonText}
+            href={buttonHref}
+            icon={buttonIcon}
+            full={true}
+          />
+        ) : null}
       </CardBody>
     </CardContainer>
   );

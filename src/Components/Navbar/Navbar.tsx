@@ -90,7 +90,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <NavbarWrapper>
+      <NavbarWrapper ref={ref}>
         <Brand>
           <Typo.Navbar>Comp-3 Interactive</Typo.Navbar>
         </Brand>
@@ -101,7 +101,7 @@ export const Navbar = () => {
           />
         </Toggle>
         {isOpen ? (
-          <InnerNavBar ref={ref}>
+          <InnerNavBar>
             <NavLink
               label={"Home"}
               href={"/#/"}
