@@ -9,6 +9,7 @@ import { Space } from "../Components/.Design/Spacing";
 import * as Divs from "../Components/DivBoxes/DivBox";
 import * as Tokens from "../Components/.Design/Tokens";
 import * as Brands from "@fortawesome/free-brands-svg-icons";
+import * as Typo from "../Components/Typography/Typography";
 
 import { Content } from "../Content/Home";
 
@@ -30,16 +31,6 @@ export const Home = () => {
         <Row nogutter>
           <Col>
             <Panel
-              header={Content.underConstruction.header}
-              date={Content.underConstruction.date}
-              body={Content.underConstruction.body}
-            />
-          </Col>
-        </Row>
-
-        <Row nogutter>
-          <Col>
-            <Panel
               header={Content.welcomeBar.header}
               date={Content.welcomeBar.date}
               body={Content.welcomeBar.body}
@@ -55,6 +46,14 @@ export const Home = () => {
 
       <Divs.LeftSideThick color={Tokens.Colour.black}>
         <Container>
+          <Row nogutter>
+            <Col>
+              <Typo.StyledCardHeaderText>
+                Where can you find us?
+              </Typo.StyledCardHeaderText>
+              <Space height={30} />
+            </Col>
+          </Row>
           <Row nogutter>
             <Col md={4}>
               <Card
@@ -78,17 +77,86 @@ export const Home = () => {
             </Col>
             <Col md={4}>
               <Card
-                header={Content.cards.itch.header}
-                subheader={Content.cards.itch.subheader}
-                body={Content.cards.itch.body}
-                cardImageURL={Content.cards.itch.cardImageURL}
-                href={Content.cards.itch.href}
-                footerText={Content.cards.itch.footerText}
+                header={Content.cards.instagram.header}
+                subheader={Content.cards.instagram.subheader}
+                body={Content.cards.instagram.body}
+                cardImageURL={Content.cards.instagram.cardImageURL}
+                href={Content.cards.instagram.href}
+                footerText={Content.cards.instagram.footerText}
               />
             </Col>
           </Row>
         </Container>
       </Divs.LeftSideThick>
+
+      <Container>
+        <Row nogutter>
+          <Col>
+            <Typo.StyledCardHeaderText>
+              Do we make games?
+            </Typo.StyledCardHeaderText>
+            <Space height={30} />
+          </Col>
+        </Row>
+        <Row nogutter>
+          <Col>
+            <Panel
+              header={Content.devlogBar.header}
+              date={Content.devlogBar.date}
+              body={Content.devlogBar.body}
+              buttonText={"Check Out What We're Up To"}
+              buttonHref={Links.youtube}
+            />
+          </Col>
+        </Row>
+      </Container>
+
+      <Divs.LeftSideThick color={Tokens.Colour.black}>
+        <Container>
+          <Row nogutter>
+            <Col>
+              <Typo.StyledCardHeaderText>
+                What do we have for you?
+              </Typo.StyledCardHeaderText>
+              <Space height={30} />
+            </Col>
+          </Row>
+          <Row nogutter>
+            <Col md={4}>
+              <Card
+                header={Content.cards.discord.header}
+                subheader={Content.cards.discord.subheader}
+                body={Content.cards.discord.body}
+                cardImageURL={Content.cards.discord.cardImageURL}
+                href={Content.cards.discord.href}
+                footerText={Content.cards.discord.footerText}
+              />
+            </Col>
+            <Col md={4}>
+              <Card
+                header={Content.cards.assets.header}
+                subheader={Content.cards.assets.subheader}
+                body={Content.cards.assets.body}
+                cardImageURL={Content.cards.assets.cardImageURL}
+                href={Content.cards.assets.href}
+                footerText={Content.cards.assets.footerText}
+              />
+            </Col>
+            <Col md={4}>
+              <Card
+                header={Content.cards.support.header}
+                subheader={Content.cards.support.subheader}
+                body={Content.cards.support.body}
+                cardImageURL={Content.cards.support.cardImageURL}
+                href={Content.cards.support.href}
+                footerText={Content.cards.support.footerText}
+              />
+            </Col>
+          </Row>
+        </Container>
+      </Divs.LeftSideThick>
+
+      <Space height={20} />
 
       <Footer />
     </>
