@@ -17,7 +17,7 @@ export const Font = {
     tiny: "12px",
     small: "16px",
     medium: "22px",
-    large: "32px",
+    large: "30px",
     xl: "5vw",
   },
 };

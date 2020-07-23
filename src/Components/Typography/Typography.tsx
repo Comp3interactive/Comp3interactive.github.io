@@ -21,7 +21,7 @@ export const Navbar = styled.div`
 
 export const StyledHeader = styled.div`
   @media only screen and (max-width: 600px) {
-    font-size: ${Tokens.Font.sizes.medium};
+    font-size: ${Tokens.Font.sizes.large};
   }
 
   font-size: ${Tokens.Font.sizes.xl};
@@ -48,8 +48,11 @@ export const StyledText = styled.div`
   color: ${Tokens.Colour.darkGrey};
 `;
 
-export const MainHeader = styled.h1`
-  font-size: ${Tokens.Font.sizes.large};
+export const SubHeader = styled.h2`
+  @media only screen and (max-width: 600px) {
+    font-size: ${Tokens.Font.sizes.large};
+  }
+  font-size: ${Tokens.Font.sizes.xl};
   font-weight: ${Tokens.Font.weight.bold};
   color: ${Tokens.Colour.white};
   text-align: center;

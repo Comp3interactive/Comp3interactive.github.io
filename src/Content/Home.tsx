@@ -19,6 +19,16 @@ export const Content = {
       "Check out the links below to learn more about the services we offer and find links to where you can find us, or if you're in a hurry to get learning you can click here to be taken directly to our YouTube page! Just don't forget to like, comment and subscribe!",
     ],
   },
+  latestSeries: {
+    header: "Invaders From Outerspace - Our Latest Series",
+    date: "",
+    body: [
+      "Our latest major release was a full 20 episode series named 'Let's Make: Invaders from Outerspace' where we go through the development of a recreation of a well loved arcade classic... Space Invaders!",
+      "We take you through the entire development process from start to finish, this includes the initial project set up, sprite optimisation, mobile controls, saving and loading data, a shop interface for ship upgrades all the way to building the project and uploading it to the Google Play Store.",
+      "This series comes complete with the asset pack used in the tutorial completly free! So if you aren't an art and design kind of person, no need to worry! All those assets are waiting for you! Just check out the links below to get started.",
+    ],
+    imgUrl: "./Images/InvadersFromOuterspace.png",
+  },
   devlogBar: {
     header: "We also make games occasionally",
     date: "",

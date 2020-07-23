@@ -4,15 +4,18 @@ import * as Tokens from "../.Design/Tokens";
 import * as Typo from "../Typography/Typography";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { Button } from "../Button/Button";
+import { Container, Row, Col, setConfiguration } from "react-grid-system";
 
 export interface CardProps {
   header: string;
   date?: string;
   body: any[];
-  buttonText?: string;
-  buttonHref?: string;
-  buttonIcon?: IconDefinition;
   imgUrl?: string;
+  buttons?: {
+    buttonText: string;
+    buttonHref: string;
+    buttonIcon?: IconDefinition;
+  }[];
 }
 
 interface CircleProps {
@@ -66,20 +69,21 @@ const StyledImage = styled.img`
   border-radius: ${Tokens.Styling.roundedBorderSmall}
     ${Tokens.Styling.roundedBorderSmall} 0 0;
 `;
+
+const BigImage = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: ${Tokens.Styling.roundedBorderSmall}
+    ${Tokens.Styling.roundedBorderSmall} ${Tokens.Styling.roundedBorderSmall}
+    ${Tokens.Styling.roundedBorderSmall};
+`;
+
 const CardheaderImageContainer = styled.div`
   position: relative;
   text-align: center;
 `;
 
-export const Panel = ({
-  header,
-  date,
-  body,
-  buttonText,
-  buttonHref,
-  buttonIcon,
-  imgUrl,
-}: CardProps) => {
+export const Panel = ({ header, date, body, buttons, imgUrl }: CardProps) => {
   return (
     <CardContainer>
       <CardHeader>
@@ -102,15 +106,79 @@ export const Panel = ({
             <StyledImage src={imgUrl} />
           </CardheaderImageContainer>
         ) : null}
-        {buttonText ? (
-          <Button
-            label={buttonText}
-            href={buttonHref}
-            icon={buttonIcon}
-            full={true}
-          />
-        ) : null}
+
+        {buttons
+          ? buttons.map((buttonData, i) => (
+              <div key={i}>
+                <br />
+                <Button
+                  label={buttonData.buttonText}
+                  href={buttonData.buttonHref}
+                  icon={buttonData.buttonIcon}
+                  full={true}
+                />
+              </div>
+            ))
+          : null}
       </CardBody>
     </CardContainer>
+  );
+};
+
+export const ImagePanel = ({
+  header,
+  date,
+  body,
+  buttons,
+  imgUrl,
+}: CardProps) => {
+  setConfiguration({ maxScreenClass: "lg" });
+  return (
+    <Container>
+      <CardContainer>
+        <CardHeader>
+          <div>
+            <Circle color="#FF605C" />
+            <Circle color="#FFBD44" />
+            <Circle color="#00CA4E" />
+          </div>
+          <Typo.DevLogDate>{date}</Typo.DevLogDate>
+        </CardHeader>
+        <CardBody>
+          <Typo.StyledCardSubtitleText>{header}</Typo.StyledCardSubtitleText>
+          <br />
+          <Row>
+            <Col md={6}>
+              {imgUrl ? (
+                <CardheaderImageContainer>
+                  <BigImage src={imgUrl} />
+                </CardheaderImageContainer>
+              ) : null}
+            </Col>
+            <Col md={6}>
+              {body.map((paragraph, i) => (
+                <Typo.StyledCardBodyText key={i}>
+                  {paragraph}
+                </Typo.StyledCardBodyText>
+              ))}
+            </Col>
+          </Row>
+
+          {buttons
+            ? buttons.map((buttonData, i) => (
+                <div key={i}>
+                  <br />
+                  <Button
+                    label={buttonData.buttonText}
+                    href={buttonData.buttonHref}
+                    icon={buttonData.buttonIcon}
+                    full={true}
+                  />
+                </div>
+              ))
+            : null}
+        </CardBody>
+      </CardContainer>
+    </Container>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 import { Header } from "../Components/Header/Header";
 import { Footer } from "../Components/Footer/Footer";
-import { Panel } from "../Components/Card/Panel";
+import { Panel, ImagePanel } from "../Components/Card/Panel";
 import { Navbar } from "../Components/Navbar/Navbar";
 import { Card } from "../Components/Card/Card";
 import { Space } from "../Components/.Design/Spacing";
@@ -34,9 +34,13 @@ export const Home = () => {
               header={Content.welcomeBar.header}
               date={Content.welcomeBar.date}
               body={Content.welcomeBar.body}
-              buttonText={"Start Learning Now"}
-              buttonHref={Links.youtube}
-              buttonIcon={Brands.faYoutube}
+              buttons={[
+                {
+                  buttonText: "Start Learning Now",
+                  buttonHref: Links.youtube,
+                  buttonIcon: Brands.faYoutube,
+                },
+              ]}
             />
           </Col>
         </Row>
@@ -48,7 +52,7 @@ export const Home = () => {
         <Container>
           <Row nogutter>
             <Col>
-              <Typo.MainHeader>Where can you find us?</Typo.MainHeader>
+              <Typo.SubHeader>Where can you find us?</Typo.SubHeader>
               <Space height={30} />
             </Col>
           </Row>
@@ -90,7 +94,7 @@ export const Home = () => {
       <Container>
         <Row nogutter>
           <Col>
-            <Typo.MainHeader>Do we make games?</Typo.MainHeader>
+            <Typo.SubHeader>Do we make games?</Typo.SubHeader>
             <Space height={20} />
           </Col>
         </Row>
@@ -100,8 +104,12 @@ export const Home = () => {
               header={Content.devlogBar.header}
               date={Content.devlogBar.date}
               body={Content.devlogBar.body}
-              buttonText={"Check Out What We're Up To"}
-              buttonHref={"/#/Devlogs"}
+              buttons={[
+                {
+                  buttonText: "Check Out What We're Up To",
+                  buttonHref: "/#/Devlogs",
+                },
+              ]}
               imgUrl="./Images/Illustrations/devlog.png"
             />
           </Col>
@@ -112,7 +120,7 @@ export const Home = () => {
         <Container>
           <Row nogutter>
             <Col>
-              <Typo.MainHeader>What do we have for you?</Typo.MainHeader>
+              <Typo.SubHeader>What do we have for you?</Typo.SubHeader>
               <Space height={30} />
             </Col>
           </Row>
@@ -150,6 +158,25 @@ export const Home = () => {
           </Row>
         </Container>
       </Divs.LeftSideThick>
+
+      <ImagePanel
+        header={Content.latestSeries.header}
+        date={Content.latestSeries.date}
+        body={Content.latestSeries.body}
+        buttons={[
+          {
+            buttonText: "Watch The Series Here",
+            buttonHref: Links.invaders,
+            buttonIcon: Brands.faYoutube,
+          },
+          {
+            buttonText: "Download The Assets",
+            buttonHref: Links.itch,
+            buttonIcon: Brands.faItchIo,
+          },
+        ]}
+        imgUrl={Content.latestSeries.imgUrl}
+      />
 
       <Space height={20} />
 
