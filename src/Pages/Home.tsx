@@ -11,6 +11,8 @@ import * as Tokens from "../Components/.Design/Tokens";
 import * as Brands from "@fortawesome/free-brands-svg-icons";
 import * as Typo from "../Components/Typography/Typography";
 
+import * as Ad from "../Components/Ads/Ads";
+
 import { Content } from "../Content/Home";
 
 import { Container, Row, Col, setConfiguration } from "react-grid-system";
@@ -52,7 +54,7 @@ export const Home = () => {
         <Container>
           <Row nogutter>
             <Col>
-              <Typo.SubHeader>Where can you find us?</Typo.SubHeader>
+              <Typo.SubHeader>Where can you find us??</Typo.SubHeader>
               <Space height={30} />
             </Col>
           </Row>
