@@ -91,14 +91,14 @@ export const Home = () => {
         </Container>
       </Divs.LeftSideThick>
 
-      <Container>
+      {/* <Container>
         <Row nogutter>
           <Col>
             <Typo.SubHeader>Do we make games?</Typo.SubHeader>
             <Space height={20} />
           </Col>
-        </Row>
-        <Row nogutter>
+        </Row> */}
+      {/* <Row nogutter>
           <Col>
             <Panel
               header={Content.devlogBar.header}
@@ -113,70 +113,71 @@ export const Home = () => {
               imgUrl="./Images/Illustrations/devlog.png"
             />
           </Col>
+        </Row> */}
+      {/* </Container> */}
+
+      <Container>
+        <Row nogutter>
+          <Col>
+            <Typo.SubHeader>What do we have for you?</Typo.SubHeader>
+            <Space height={30} />
+          </Col>
+        </Row>
+        <Row nogutter>
+          <Col md={4}>
+            <Card
+              header={Content.cards.discord.header}
+              subheader={Content.cards.discord.subheader}
+              body={Content.cards.discord.body}
+              cardImageURL={Content.cards.discord.cardImageURL}
+              href={Content.cards.discord.href}
+              footerText={Content.cards.discord.footerText}
+            />
+          </Col>
+          <Col md={4}>
+            <Card
+              header={Content.cards.assets.header}
+              subheader={Content.cards.assets.subheader}
+              body={Content.cards.assets.body}
+              cardImageURL={Content.cards.assets.cardImageURL}
+              href={Content.cards.assets.href}
+              footerText={Content.cards.assets.footerText}
+            />
+          </Col>
+          <Col md={4}>
+            <Card
+              header={Content.cards.support.header}
+              subheader={Content.cards.support.subheader}
+              body={Content.cards.support.body}
+              cardImageURL={Content.cards.support.cardImageURL}
+              href={Content.cards.support.href}
+              footerText={Content.cards.support.footerText}
+            />
+          </Col>
         </Row>
       </Container>
 
-      <Divs.LeftSideThick color={Tokens.Colour.black}>
-        <Container>
-          <Row nogutter>
-            <Col>
-              <Typo.SubHeader>What do we have for you?</Typo.SubHeader>
-              <Space height={30} />
-            </Col>
-          </Row>
-          <Row nogutter>
-            <Col md={4}>
-              <Card
-                header={Content.cards.discord.header}
-                subheader={Content.cards.discord.subheader}
-                body={Content.cards.discord.body}
-                cardImageURL={Content.cards.discord.cardImageURL}
-                href={Content.cards.discord.href}
-                footerText={Content.cards.discord.footerText}
-              />
-            </Col>
-            <Col md={4}>
-              <Card
-                header={Content.cards.assets.header}
-                subheader={Content.cards.assets.subheader}
-                body={Content.cards.assets.body}
-                cardImageURL={Content.cards.assets.cardImageURL}
-                href={Content.cards.assets.href}
-                footerText={Content.cards.assets.footerText}
-              />
-            </Col>
-            <Col md={4}>
-              <Card
-                header={Content.cards.support.header}
-                subheader={Content.cards.support.subheader}
-                body={Content.cards.support.body}
-                cardImageURL={Content.cards.support.cardImageURL}
-                href={Content.cards.support.href}
-                footerText={Content.cards.support.footerText}
-              />
-            </Col>
-          </Row>
-        </Container>
-      </Divs.LeftSideThick>
-
-      <ImagePanel
-        header={Content.latestSeries.header}
-        date={Content.latestSeries.date}
-        body={Content.latestSeries.body}
-        buttons={[
-          {
-            buttonText: "Watch The Series Here",
-            buttonHref: Links.invaders,
-            buttonIcon: Brands.faYoutube,
-          },
-          {
-            buttonText: "Download The Assets",
-            buttonHref: Links.itch,
-            buttonIcon: Brands.faItchIo,
-          },
-        ]}
-        imgUrl={Content.latestSeries.imgUrl}
-      />
+      <Divs.RightSideThick color={Tokens.Colour.black}>
+        <Space height={20} />
+        <ImagePanel
+          header={Content.latestSeries.header}
+          date={Content.latestSeries.date}
+          body={Content.latestSeries.body}
+          buttons={[
+            {
+              buttonText: "Watch The Series Here",
+              buttonHref: Links.invaders,
+              buttonIcon: Brands.faYoutube,
+            },
+            {
+              buttonText: "Download The Assets",
+              buttonHref: Links.itch,
+              buttonIcon: Brands.faItchIo,
+            },
+          ]}
+          imgUrl={Content.latestSeries.imgUrl}
+        />
+      </Divs.RightSideThick>
 
       <Space height={20} />
 

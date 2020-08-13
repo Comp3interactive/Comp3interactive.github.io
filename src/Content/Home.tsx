@@ -29,13 +29,13 @@ export const Content = {
     ],
     imgUrl: "./Images/InvadersFromOuterspace.png",
   },
-  devlogBar: {
-    header: "We also make games occasionally",
-    date: "",
-    body: [
-      "When we have a spare minute here and there we do still like to make games ourselves! Check out the link below to follow our dev logs but bare in mind... This may be empty at the moment as we aren't currently working on a game!",
-    ],
-  },
+  // devlogBar: {
+  //   header: "We also make games occasionally",
+  //   date: "",
+  //   body: [
+  //     "When we have a spare minute here and there we do still like to make games ourselves! Check out the link below to follow our dev logs but bare in mind... This may be empty at the moment as we aren't currently working on a game!",
+  //   ],
+  // },
   cards: {
     tutorials: {
       header: "YouTube",
