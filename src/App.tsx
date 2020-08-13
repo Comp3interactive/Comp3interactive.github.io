@@ -4,7 +4,7 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import ScrollToTop from "./Utils/ScrollToTop";
 // Pages
 import { Home } from "./Pages/Home";
-import { DevLogs } from "./Pages/DevLogs";
+// import { DevLogs } from "./Pages/DevLogs";
 import { AssetCollections } from "./Pages/AssetCollections";
 import { SupportUs } from "./Pages/SupportUs";
 import { FourZeroFour } from "./Pages/404";
@@ -18,7 +18,7 @@ function App() {
       <Switch>
         <Route path={"/"} exact component={Home} />
         <Route path={"/Playground"} component={ComponentPlayground} />
-        <Route path={"/Devlogs"} component={DevLogs} />
+        {/* <Route path={"/Devlogs"} component={DevLogs} /> */}
         <Route path={"/Assets"} component={AssetCollections} />
         <Route path={"/SupportUs"} component={SupportUs} />
         <Route component={FourZeroFour} />

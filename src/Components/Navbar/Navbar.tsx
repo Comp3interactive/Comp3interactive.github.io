@@ -109,13 +109,13 @@ export const Navbar = () => {
                 setIsOpen(false);
               }}
             />
-            <NavLink
+            {/* <NavLink
               label={"Development Logs"}
               href={"/#/DevLogs"}
               onClick={() => {
                 setIsOpen(false);
               }}
-            />
+            /> */}
             <NavLink
               label={"Asset Collections"}
               href={"/#/Assets"}
