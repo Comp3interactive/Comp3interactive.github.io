@@ -8,6 +8,8 @@ import { Home } from "./Pages/Home";
 import { AssetCollections } from "./Pages/AssetCollections";
 import { SupportUs } from "./Pages/SupportUs";
 import { FourZeroFour } from "./Pages/404";
+// Game Pages
+import { WordDrop } from "./Pages/GameLandingPages/WordDrop";
 // WIP
 import { ComponentPlayground } from "./Pages/ComponentPlayground";
 
@@ -21,6 +23,9 @@ function App() {
         {/* <Route path={"/Devlogs"} component={DevLogs} /> */}
         <Route path={"/Assets"} component={AssetCollections} />
         <Route path={"/SupportUs"} component={SupportUs} />
+        {/* GAME PAGES */}
+        <Route path={"/WordDrop"} component={WordDrop} />
+        {/* 404 */}
         <Route component={FourZeroFour} />
       </Switch>
     </Router>
