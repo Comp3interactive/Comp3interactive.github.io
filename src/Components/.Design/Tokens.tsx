@@ -1,17 +1,15 @@
 export const Colour = {
-  green: "#61892f",
-  darkGreen: "#577A2C",
-  lightGrey: "#DBDBDB",
-  mediumGrey: "#4D5061",
-  darkGrey: "#232528",
-  black: "#0D1B1E",
-  white: "#f1f1f8",
+  darkestGrey: "#282a36",
+  offWhite: "#f7f5fb",
+  seafoamGreen: "#81bdb5",
+  lightBlue: "#70ddce",
 };
 
 export const Font = {
   weight: {
-    standard: "400",
-    bold: "700",
+    thin: "100",
+    standard: "300",
+    bold: "500",
   },
   sizes: {
     tiny: "12px",

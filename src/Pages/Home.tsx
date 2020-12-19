@@ -1,20 +1,75 @@
 import React from "react";
 
-import { Header } from "../Components/Header/Header";
-import { Footer } from "../Components/Footer/Footer";
-import { Panel, ImagePanel } from "../Components/Card/Panel";
-import { Navbar } from "../Components/Navbar/Navbar";
-import { Card } from "../Components/Card/Card";
-import { Space } from "../Components/.Design/Spacing";
-import * as Divs from "../Components/DivBoxes/DivBox";
-import * as Tokens from "../Components/.Design/Tokens";
 import * as Brands from "@fortawesome/free-brands-svg-icons";
-import * as Typo from "../Components/Typography/Typography";
-
-import { Content } from "../Content/Home";
-
+import { Content } from "../Content/NewHome";
 import { Container, Row, Col, setConfiguration } from "react-grid-system";
+
+import {
+  PageWrapper,
+  TickerTape,
+  Footer,
+  H1,
+  LinkCard,
+  P,
+  Button,
+} from "../Components";
+import styled from "@emotion/styled";
 import { Links } from "../Utils/ExternalLinks";
+import { H2 } from "../Components/Typography/Typo";
+
+export const StyledCard = styled.div`
+  margin: 0px 20px;
+  background-image: linear-gradient(to bottom right, #626374, #454757);
+
+  border-radius: 10px;
+
+  -webkit-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 1);
+`;
+
+export const StyledLearnButton = styled.div`
+  margin: 20px 10px;
+`;
+
+export const StyledVideo = styled.iframe`
+  border-radius: 10px 10px 0px 0px;
+  border: none;
+
+  width: 100%;
+  height: 240px;
+`;
+
+export const StyledImage = styled.img`
+  border-radius: 10px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  -webkit-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.3);
+`;
+
+export const StyledHeader = styled.img`
+  border-radius: 10px 10px 0px 0px;
+
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  -webkit-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.3);
+`;
+
+export const VerticalDivider = styled.div`
+  background-color: #3d3f4a;
+  height: auto;
+  width 2px;
+`;
 
 export const Home = () => {
   setConfiguration({ maxScreenClass: "lg" });
@@ -22,166 +77,98 @@ export const Home = () => {
   console.log(Content.consoleMessage);
 
   return (
-    <>
-      <Navbar />
+    <Container>
+      <TickerTape tickerText="Consider supporting us on Patreon!" />
+      <PageWrapper>
+        <StyledHeader src={"./Images/HeaderSizer.png"} />
 
-      <Header headerText={Content.headerSubtext} />
-
-      <Container>
+        {/* LEFT SIDE */}
         <Row nogutter>
-          <Col>
-            <Panel
-              header={Content.welcomeBar.header}
-              date={Content.welcomeBar.date}
-              body={Content.welcomeBar.body}
-              buttons={[
-                {
-                  buttonText: "Start Learning Now",
-                  buttonHref: Links.youtube,
-                  buttonIcon: Brands.faYoutube,
-                },
-              ]}
-            />
+          <Col md={7}>
+            <H1>{Content.H1.aboutComp3}</H1>
+            <Row nogutter>
+              <StyledCard>
+                <Col md={12}>
+                  {Content.mainCardText.map((paragraph, i) => (
+                    <P key={i}>{paragraph}</P>
+                  ))}
+
+                  <StyledLearnButton>
+                    <Button
+                      href={Links.youtube}
+                      label="Start Learning"
+                      width={"100%"}
+                      icon={Brands.faYoutube}
+                    />
+                  </StyledLearnButton>
+                </Col>
+              </StyledCard>
+            </Row>
+
+            <H1>{Content.H1.recommended}</H1>
+            <Row nogutter>
+              <StyledCard>
+                {Content.recommendedText.map((paragraph, i) => (
+                  <P key={i}>{paragraph}</P>
+                ))}
+
+                <StyledImage
+                  src={"./Images/InvadersFromOuterspace.png"}
+                  width={"70%"}
+                />
+
+                <StyledLearnButton>
+                  <Button
+                    href={Links.invaders}
+                    label="Go To Series"
+                    width={"100%"}
+                    icon={Brands.faYoutube}
+                  />
+                </StyledLearnButton>
+              </StyledCard>
+            </Row>
+
+            <H1>{Content.H1.upcoming}</H1>
+            <Row nogutter>
+              <StyledCard>
+                {Content.upcomingEventText.map((paragraph, i) => (
+                  <P key={i}>{paragraph}</P>
+                ))}
+              </StyledCard>
+            </Row>
+          </Col>
+          <VerticalDivider />
+          {/* RIGHT SIDE */}
+          <Col md={4.9}>
+            <H1>{Content.H1.findUs}</H1>
+            <StyledCard>
+              <Row nogutter>
+                <StyledVideo
+                  src="https://www.youtube.com/embed/J4DxV_ZIIjE"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                />
+              </Row>
+
+              {Content.findUsContent.map((contentLink, i) => (
+                <>
+                  <H2>{contentLink.header}</H2>
+                  {contentLink.links.map((link, ii) => (
+                    <Row nogutter>
+                      <LinkCard
+                        header={link.header}
+                        body={link.body}
+                        icon={link.icon}
+                        href={link.href}
+                      />
+                    </Row>
+                  ))}
+                </>
+              ))}
+            </StyledCard>
           </Col>
         </Row>
-      </Container>
-
-      <Space height={20} />
-
-      <Divs.LeftSideThick color={Tokens.Colour.black}>
-        <Container>
-          <Row nogutter>
-            <Col>
-              <Typo.SubHeader>Where can you find us??</Typo.SubHeader>
-              <Space height={30} />
-            </Col>
-          </Row>
-          <Row nogutter>
-            <Col md={4}>
-              <Card
-                header={Content.cards.tutorials.header}
-                subheader={Content.cards.tutorials.subheader}
-                body={Content.cards.tutorials.body}
-                cardImageURL={Content.cards.tutorials.cardImageURL}
-                href={Content.cards.tutorials.href}
-                footerText={Content.cards.tutorials.footerText}
-              />
-            </Col>
-            <Col md={4}>
-              <Card
-                header={Content.cards.facebook.header}
-                subheader={Content.cards.facebook.subheader}
-                body={Content.cards.facebook.body}
-                cardImageURL={Content.cards.facebook.cardImageURL}
-                href={Content.cards.facebook.href}
-                footerText={Content.cards.facebook.footerText}
-              />
-            </Col>
-            <Col md={4}>
-              <Card
-                header={Content.cards.instagram.header}
-                subheader={Content.cards.instagram.subheader}
-                body={Content.cards.instagram.body}
-                cardImageURL={Content.cards.instagram.cardImageURL}
-                href={Content.cards.instagram.href}
-                footerText={Content.cards.instagram.footerText}
-              />
-            </Col>
-          </Row>
-        </Container>
-      </Divs.LeftSideThick>
-
-      {/* <Container>
-        <Row nogutter>
-          <Col>
-            <Typo.SubHeader>Do we make games?</Typo.SubHeader>
-            <Space height={20} />
-          </Col>
-        </Row> */}
-      {/* <Row nogutter>
-          <Col>
-            <Panel
-              header={Content.devlogBar.header}
-              date={Content.devlogBar.date}
-              body={Content.devlogBar.body}
-              buttons={[
-                {
-                  buttonText: "Check Out What We're Up To",
-                  buttonHref: "/#/Devlogs",
-                },
-              ]}
-              imgUrl="./Images/Illustrations/devlog.png"
-            />
-          </Col>
-        </Row> */}
-      {/* </Container> */}
-
-      <Container>
-        <Row nogutter>
-          <Col>
-            <Typo.SubHeader>What do we have for you?</Typo.SubHeader>
-            <Space height={30} />
-          </Col>
-        </Row>
-        <Row nogutter>
-          <Col md={4}>
-            <Card
-              header={Content.cards.discord.header}
-              subheader={Content.cards.discord.subheader}
-              body={Content.cards.discord.body}
-              cardImageURL={Content.cards.discord.cardImageURL}
-              href={Content.cards.discord.href}
-              footerText={Content.cards.discord.footerText}
-            />
-          </Col>
-          <Col md={4}>
-            <Card
-              header={Content.cards.assets.header}
-              subheader={Content.cards.assets.subheader}
-              body={Content.cards.assets.body}
-              cardImageURL={Content.cards.assets.cardImageURL}
-              href={Content.cards.assets.href}
-              footerText={Content.cards.assets.footerText}
-            />
-          </Col>
-          <Col md={4}>
-            <Card
-              header={Content.cards.support.header}
-              subheader={Content.cards.support.subheader}
-              body={Content.cards.support.body}
-              cardImageURL={Content.cards.support.cardImageURL}
-              href={Content.cards.support.href}
-              footerText={Content.cards.support.footerText}
-            />
-          </Col>
-        </Row>
-      </Container>
-
-      <Divs.RightSideThick color={Tokens.Colour.black}>
-        <Space height={20} />
-        <ImagePanel
-          header={Content.latestSeries.header}
-          date={Content.latestSeries.date}
-          body={Content.latestSeries.body}
-          buttons={[
-            {
-              buttonText: "Watch The Series Here",
-              buttonHref: Links.invaders,
-              buttonIcon: Brands.faYoutube,
-            },
-            {
-              buttonText: "Download The Assets",
-              buttonHref: Links.itch,
-              buttonIcon: Brands.faItchIo,
-            },
-          ]}
-          imgUrl={Content.latestSeries.imgUrl}
-        />
-      </Divs.RightSideThick>
-
-      <Space height={20} />
-
-      <Footer />
-    </>
+        <Footer />
+      </PageWrapper>
+    </Container>
   );
 };

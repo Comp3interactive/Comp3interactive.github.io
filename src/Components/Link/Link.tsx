@@ -10,7 +10,7 @@ export interface LinkProps {
 
 const StyledLink = styled.a<LinkProps>`
   font-size: ${Tokens.Font.sizes.small};
-  color: ${(props) => (props.color ? props.color : Tokens.Colour.white)};
+  color: ${(props) => (props.color ? props.color : Tokens.Colour.offWhite)};
   text-decoration: none;
 `;
 

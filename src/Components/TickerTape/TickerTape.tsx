@@ -1,33 +1,34 @@
-import React from "react";
-import styled from "@emotion/styled";
-import * as Tokens from "../.Design/Tokens";
-import * as Typo from "../Typography/Typography";
+import React, { useState, useEffect } from "react";
+import { TickerWrapper, CloseButton } from "./TickerTapeStyling";
 
 export interface TickerProps {
   tickerText: string;
 }
 
-const TickerWrapper = styled.div`
-  position: fixed;
-  bottom: 0;
-  left: 0px;
-  width: 100%;
-
-  padding: 10px;
-
-  background-color: ${Tokens.Colour.black};
-  text-align: center;
-  color: ${Tokens.Colour.white};
-
-  z-index: 2;
-`;
-
 export const TickerTape = ({ tickerText }: TickerProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const tickerTimer = 5000;
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    let timer1 = setTimeout(() => setIsOpen(true), tickerTimer);
+    return () => {
+      clearTimeout(timer1);
+    };
+  }, []);
+
   return (
     <>
-      <TickerWrapper>
-        <Typo.Copyright>{tickerText}</Typo.Copyright>
-      </TickerWrapper>
+      {isOpen && (
+        <TickerWrapper>
+          <div />
+          {tickerText}
+          <CloseButton onClick={handleClose}>X</CloseButton>
+        </TickerWrapper>
+      )}
     </>
   );
 };
