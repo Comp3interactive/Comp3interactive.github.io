@@ -12,13 +12,16 @@ export const TickerWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  padding: 10px;
+  padding: 20px;
 
-  background-color: black;
+  background-color: ${Tokens.Colour.midGrey};
   text-align: center;
-  color: ${Tokens.Colour.offWhite};
 
   z-index: 2;
+
+  -webkit-box-shadow: 0px -10px 69px 29px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -10px 69px 29px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -10px 69px 29px rgba(0, 0, 0, 0.75);
 `;
 
 export const CloseButton = styled.button`
@@ -31,4 +34,9 @@ export const CloseButton = styled.button`
   text-decoration: none;
   font-size: ${Tokens.Font.sizes.tiny};
   font-weight: bold;
+`;
+
+export const Link = styled.a`
+  text-decoration: none;
+  color: ${Tokens.Colour.offWhite};
 `;

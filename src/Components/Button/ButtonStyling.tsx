@@ -7,8 +7,8 @@ export const StyledLinkButton = styled.button<LinkButtonProps>`
   display: inline-block;
   border: 0.125rem solid transparent;
   border-radius: 2rem;
-  background-color: ${Tokens.Colour.seafoamGreen};
-  color: ${Tokens.Colour.darkestGrey};
+  background-color: ${Tokens.Colour.accent};
+  color: ${Tokens.Colour.white};
   width: ${(props) => (props.width ? props.width : "auto")};
   text-decoration: none;
   font-size: ${Tokens.Font.sizes.small};
@@ -22,8 +22,8 @@ export const StyledLinkButton = styled.button<LinkButtonProps>`
   &:hover {
     cursor: pointer;
     background-color: transparent;
-    color: ${Tokens.Colour.seafoamGreen};
-    border: 0.125rem solid ${Tokens.Colour.seafoamGreen};
+    color: ${Tokens.Colour.accent};
+    border: 0.125rem solid ${Tokens.Colour.accent};
     text-decoration: none;
   }
 `;

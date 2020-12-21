@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { TickerWrapper, CloseButton } from "./TickerTapeStyling";
+import { TickerWrapper, CloseButton, Link } from "./TickerTapeStyling";
+import { Links } from "../../Utils/ExternalLinks";
 
 export interface TickerProps {
   tickerText: string;
@@ -25,7 +26,9 @@ export const TickerTape = ({ tickerText }: TickerProps) => {
       {isOpen && (
         <TickerWrapper>
           <div />
-          {tickerText}
+          <Link href={Links.patreon} target="_blank">
+            {tickerText}
+          </Link>
           <CloseButton onClick={handleClose}>X</CloseButton>
         </TickerWrapper>
       )}

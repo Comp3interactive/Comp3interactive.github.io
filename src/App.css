@@ -1,4 +1,23 @@
 body {
-  background-color: #b7b8ca;
-  background-image: linear-gradient(to bottom right, #b7b8ca, #6e7084);
+  background-color: #070000;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2f2f31;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2f2f31;
+  width: 5px;
 }

@@ -10,7 +10,7 @@ export const Content = {
         recommended: 'Recommended Series',
         findUs: 'Find Us Here',
         freeStuff: 'Free Stuff',
-        play: 'Play'
+        play: 'Play',
     },
 
     mainCardText: [
@@ -75,13 +75,13 @@ export const Content = {
         links: [
             {
                 header: 'GitHub',
-                body: 'GitHub Body',
+                body: 'Free code snippets and utilities',
                 icon: Brands.faGithub,
                 href: Links.github
             },
             {
                 header: 'Itch.io',
-                body: 'Itch Body',
+                body: 'Free and premium game assets',
                 icon: Brands.faItchIo,
                 href: Links.itch
             }
@@ -92,9 +92,20 @@ export const Content = {
         links: [
             {
                 header: 'Android Games',
-                body: 'All Games Body',
+                body: 'We do make games too!',
                 icon: Brands.faGooglePlay,
                 href: Links.googleplay
+            }
+        ]
+    },
+    {
+        header: 'Support Us',
+        links: [
+            {
+                header: 'Patreon Support',
+                body: 'Help us keep the lights on!',
+                icon: Brands.faPatreon,
+                href: Links.patreon
             }
         ]
     }

@@ -17,9 +17,9 @@ import styled from "@emotion/styled";
 import { Links } from "../Utils/ExternalLinks";
 import { H2 } from "../Components/Typography/Typo";
 
-export const StyledCard = styled.div`
+export const StyledCard = styled.div<{ showBackground: boolean }>`
   margin: 0px 20px;
-  background-image: linear-gradient(to bottom right, #626374, #454757);
+  background-color: transparent;
 
   border-radius: 10px;
 
@@ -78,16 +78,16 @@ export const Home = () => {
 
   return (
     <Container>
-      <TickerTape tickerText="Consider supporting us on Patreon!" />
+      <TickerTape tickerText="Help us keep the lights on and consider supporting us on Patreon!" />
       <PageWrapper>
-        <StyledHeader src={"./Images/HeaderSizer.png"} />
+        <StyledHeader src={"./Images/siteBanner.png"} />
 
         {/* LEFT SIDE */}
         <Row nogutter>
           <Col md={7}>
             <H1>{Content.H1.aboutComp3}</H1>
             <Row nogutter>
-              <StyledCard>
+              <StyledCard showBackground={false}>
                 <Col md={12}>
                   {Content.mainCardText.map((paragraph, i) => (
                     <P key={i}>{paragraph}</P>
@@ -107,7 +107,7 @@ export const Home = () => {
 
             <H1>{Content.H1.recommended}</H1>
             <Row nogutter>
-              <StyledCard>
+              <StyledCard showBackground={true}>
                 {Content.recommendedText.map((paragraph, i) => (
                   <P key={i}>{paragraph}</P>
                 ))}
@@ -130,7 +130,7 @@ export const Home = () => {
 
             <H1>{Content.H1.upcoming}</H1>
             <Row nogutter>
-              <StyledCard>
+              <StyledCard showBackground={true}>
                 {Content.upcomingEventText.map((paragraph, i) => (
                   <P key={i}>{paragraph}</P>
                 ))}
@@ -141,7 +141,7 @@ export const Home = () => {
           {/* RIGHT SIDE */}
           <Col md={4.9}>
             <H1>{Content.H1.findUs}</H1>
-            <StyledCard>
+            <StyledCard showBackground={false}>
               <Row nogutter>
                 <StyledVideo
                   src="https://www.youtube.com/embed/J4DxV_ZIIjE"

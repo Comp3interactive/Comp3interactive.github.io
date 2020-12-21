@@ -4,9 +4,8 @@ import * as Tokens from "../.Design/Tokens";
 export const PageWrapper = styled.div`
   margin-top: 10px;
   margin-bottom: 20px;
-  background-color: ${Tokens.Colour.offWhite};
-
-  background-image: linear-gradient(to bottom left, #565762, #353742);
+  background-color: #313032;
+  background-image: linear-gradient(to right, #393340, #313032);
 
   border-radius: 10px;
 

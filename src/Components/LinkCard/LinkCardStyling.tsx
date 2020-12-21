@@ -3,7 +3,7 @@ import * as Tokens from "../.Design/Tokens";
 
 export const StyledLinkCard = styled.div`
   padding: 10px;
-  background-image: linear-gradient(to right, #464757, #373742);
+  background-color: transparent;
   margin: 5px;
   border-radius: 10px;
   width: 100%;
@@ -35,7 +35,7 @@ export const IconHolder = styled.div`
 `;
 
 export const StyledIcon = styled.div`
-  color: ${Tokens.Colour.offWhite};
+  color: ${Tokens.Colour.white};
   font-size: 30px;
   padding: 9px 0;
   text-align: center;

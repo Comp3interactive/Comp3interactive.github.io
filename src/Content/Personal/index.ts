@@ -1,0 +1,5 @@
+export { AboutMe } from './AboutMe'
+export { ContactMe } from './ContactMe'
+export { Experience } from './Experience'
+export { Comp3Interactive } from './Comp3Interactive'
+export { Education } from './Education'

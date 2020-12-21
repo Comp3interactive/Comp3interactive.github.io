@@ -3,20 +3,20 @@ import * as Tokens from "../.Design/Tokens";
 
 export const H1 = styled.h1`
   font-size: ${Tokens.Font.sizes.large};
-  color: ${Tokens.Colour.offWhite};
+  color: ${Tokens.Colour.white};
   text-align: center;
   font-weight: bold;
 `;
 
 export const LinkCardHeader = styled.div`
   font-size: ${Tokens.Font.sizes.small};
-  color: ${Tokens.Colour.seafoamGreen};
+  color: ${Tokens.Colour.white};
   font-weight: bold;
 `;
 
 export const H2 = styled.div`
   font-size: ${Tokens.Font.sizes.medium};
-  color: ${Tokens.Colour.offWhite};
+  color: ${Tokens.Colour.accent};
   font-weight: bold;
   text-align: center;
   margin: 10px;

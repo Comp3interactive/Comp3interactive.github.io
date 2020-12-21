@@ -1,8 +1,9 @@
 export const Colour = {
-  darkestGrey: "#282a36",
-  offWhite: "#f7f5fb",
-  seafoamGreen: "#81bdb5",
-  lightBlue: "#70ddce",
+  darkestGrey: "#070000",
+  midGrey: "#1c1b1c",
+  white: "#ffffff",
+  offWhite: "#c7c6c8",
+  accent: "#b1615c",
 };
 
 export const Font = {
