@@ -1,5 +1,5 @@
 body {
-  background-color: #070000;
+  background-color: black;
 }
 
 ::-webkit-scrollbar {
@@ -13,11 +13,5 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #2f2f31;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #2f2f31;
-  width: 5px;
+  background: #444444;
 }

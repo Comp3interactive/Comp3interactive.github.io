@@ -1,33 +1,47 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { StyledLinkButton } from "./ButtonStyling";
+import { StyledButton, StyledNavButton } from "./ButtonStyling";
+import { NavLabel } from "../Typography/Typography";
 
-export interface LinkButtonProps {
+export interface ButtonProps {
   href: string;
   label?: string;
   width?: string;
   icon?: IconDefinition;
+  isExternalLink?: boolean;
+  onClick?: () => void;
 }
 
-const handleClick = (url: string) => {
+export interface NavButtonProps {
+  href?: string;
+  label?: string;
+  icon: IconDefinition;
+  isExternalLink?: boolean;
+  isSelected: boolean;
+  onClick?: () => void;
+}
+
+const externalLinkCick = (url: string) => {
   const newWindow = window.open(url, "_blank", "noopener,noreferrer");
   if (newWindow) newWindow.opener = null;
 };
 
-export const Button: React.FC<LinkButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   href,
   label,
   width,
   icon,
+  isExternalLink,
+  onClick,
 }) => {
   return (
-    <StyledLinkButton
+    <StyledButton
       href={href}
       label={label}
       icon={icon}
       width={width}
-      onClick={() => handleClick(href)}
+      onClick={isExternalLink ? () => externalLinkCick(href) : onClick}
     >
       {icon ? (
         <>
@@ -36,6 +50,29 @@ export const Button: React.FC<LinkButtonProps> = ({
       ) : (
         label
       )}
-    </StyledLinkButton>
+    </StyledButton>
+  );
+};
+
+export const NavButton: React.FC<NavButtonProps> = ({
+  href,
+  label,
+  icon,
+  isExternalLink,
+  isSelected,
+  onClick,
+}) => {
+  return (
+    <StyledNavButton
+      href={href}
+      icon={icon}
+      isSelected={isSelected}
+      onClick={
+        isExternalLink ? () => externalLinkCick(href ? href : "") : onClick
+      }
+    >
+      <FontAwesomeIcon icon={icon} />
+      <NavLabel>{label}</NavLabel>
+    </StyledNavButton>
   );
 };

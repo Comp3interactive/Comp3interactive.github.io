@@ -1,174 +1,218 @@
-import React from "react";
-
-import * as Brands from "@fortawesome/free-brands-svg-icons";
-import { Content } from "../Content/NewHome";
-import { Container, Row, Col, setConfiguration } from "react-grid-system";
-
-import {
-  PageWrapper,
-  TickerTape,
-  Footer,
-  H1,
-  LinkCard,
-  P,
-  Button,
-} from "../Components";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
+import {
+  BackgroundShapes,
+  Colour,
+  WhiteHeader,
+  SubHeader,
+  Button,
+  Copyright,
+  NavButton,
+} from "../Components";
+import * as Brands from "@fortawesome/free-brands-svg-icons";
+import * as Icons from "@fortawesome/free-solid-svg-icons";
 import { Links } from "../Utils/ExternalLinks";
-import { H2 } from "../Components/Typography/Typo";
+import useWindowDimensions from "../Hooks/ScreenSize";
+import * as Functions from "../Utils/Functions";
+import * as PageContent from "./Content";
 
-export const StyledCard = styled.div<{ showBackground: boolean }>`
-  margin: 0px 20px;
-  background-color: transparent;
+const PageWrapper = styled.div`
+  @media only screen and (min-width: 1001px) {
+    flex-direction: row;
+  }
 
-  border-radius: 10px;
+  height: 100vh;
 
-  -webkit-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 1);
-  box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
-export const StyledLearnButton = styled.div`
-  margin: 20px 10px;
+const HeaderBar = styled.div`
+  @media only screen and (max-width: 1000px) {
+    height: 15vh;
+    border-radius: 30px 30px 0px 0px;
+    width: 90vw;
+    min-width: 90vw;
+  }
+
+  min-width: 400px;
+  border-radius: 30px;
+  width: 25vw;
+  height: 80vh;
+  background-color: ${Colour.midGrey};
 `;
 
-export const StyledVideo = styled.iframe`
-  border-radius: 10px 10px 0px 0px;
-  border: none;
+const HeaderContent = styled.div`
+  @media only screen and (max-width: 1000px) {
+    margin: 10px;
+    flex-direction: row;
+  }
 
-  width: 100%;
-  height: 240px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+  margin: 50px 90px 50px 50px;
+  height: 85%;
 `;
 
-export const StyledImage = styled.img`
-  border-radius: 10px;
+const ContentArea = styled.div`
+  @media only screen and (max-width: 1000px) {
+    height: 75vh;
+    border-radius: 0px 0px 30px 30px;
+    width: 90vw;
+    margin-left: 0px;
+  }
 
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  -webkit-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.3);
+  margin-left: -50px;
+  border-radius: 30px;
+  width: 50vw;
+  height: 80vh;
+  background-color: ${Colour.darkGrey};
 `;
 
-export const StyledHeader = styled.img`
-  border-radius: 10px 10px 0px 0px;
+const ContentAreaContent = styled.div`
+  @media only screen and (max-width: 1000px) {
+    margin: 0px 20px;
+  }
 
-  display: block;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0px 50px 20px 50px;
+  height: 80%;
 
-  -webkit-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.3);
+  overflow-y: scroll;
 `;
 
-export const VerticalDivider = styled.div`
-  background-color: #3d3f4a;
+const ContentAreaLinks = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  padding: 10px;
+
+  height: 10%;
+`;
+
+const LogoContainer = styled.img`
+  @media only screen and (max-width: 1000px) {
+    height: 75px;
+  }
+
+  height: 200px;
+`;
+
+const LogoTextWrapper = styled.div`
+  @media only screen and (max-width: 1000px) {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+`;
+
+export const Image = styled.img`
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+  }
+
+  border-radius: 15px;
+  width: 50%;
   height: auto;
-  width 2px;
 `;
 
 export const Home = () => {
-  setConfiguration({ maxScreenClass: "lg" });
+  const { width } = useWindowDimensions();
 
-  console.log(Content.consoleMessage);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [currentPageContent, setCurrentPageContent] = useState(
+    PageContent.HomeContent
+  );
 
   return (
-    <Container>
-      <TickerTape tickerText="Help us keep the lights on and consider supporting us on Patreon!" />
+    <>
+      <BackgroundShapes color01={Colour.accent01} color02={Colour.accent02} />
       <PageWrapper>
-        <StyledHeader src={"./Images/siteBanner.png"} />
+        <HeaderBar>
+          <HeaderContent>
+            <LogoContainer src="./Images/Bottlecaps/Comp3.png" />
+            <LogoTextWrapper>
+              <WhiteHeader>Comp-3 Interactive</WhiteHeader>
+              <SubHeader>Subscribe.Follow.Learn()</SubHeader>
+            </LogoTextWrapper>
 
-        {/* LEFT SIDE */}
-        <Row nogutter>
-          <Col md={7}>
-            <H1>{Content.H1.aboutComp3}</H1>
-            <Row nogutter>
-              <StyledCard showBackground={false}>
-                <Col md={12}>
-                  {Content.mainCardText.map((paragraph, i) => (
-                    <P key={i}>{paragraph}</P>
-                  ))}
-
-                  <StyledLearnButton>
-                    <Button
-                      href={Links.youtube}
-                      label="Start Learning"
-                      width={"100%"}
-                      icon={Brands.faYoutube}
-                    />
-                  </StyledLearnButton>
-                </Col>
-              </StyledCard>
-            </Row>
-
-            <H1>{Content.H1.recommended}</H1>
-            <Row nogutter>
-              <StyledCard showBackground={true}>
-                {Content.recommendedText.map((paragraph, i) => (
-                  <P key={i}>{paragraph}</P>
-                ))}
-
-                <StyledImage
-                  src={"./Images/InvadersFromOuterspace.png"}
-                  width={"70%"}
-                />
-
-                <StyledLearnButton>
-                  <Button
-                    href={Links.invaders}
-                    label="Go To Series"
-                    width={"100%"}
-                    icon={Brands.faYoutube}
-                  />
-                </StyledLearnButton>
-              </StyledCard>
-            </Row>
-
-            <H1>{Content.H1.upcoming}</H1>
-            <Row nogutter>
-              <StyledCard showBackground={true}>
-                {Content.upcomingEventText.map((paragraph, i) => (
-                  <P key={i}>{paragraph}</P>
-                ))}
-              </StyledCard>
-            </Row>
-          </Col>
-          <VerticalDivider />
-          {/* RIGHT SIDE */}
-          <Col md={4.9}>
-            <H1>{Content.H1.findUs}</H1>
-            <StyledCard showBackground={false}>
-              <Row nogutter>
-                <StyledVideo
-                  src="https://www.youtube.com/embed/J4DxV_ZIIjE"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                />
-              </Row>
-
-              {Content.findUsContent.map((contentLink, i) => (
-                <>
-                  <H2>{contentLink.header}</H2>
-                  {contentLink.links.map((link, ii) => (
-                    <Row nogutter>
-                      <LinkCard
-                        header={link.header}
-                        body={link.body}
-                        icon={link.icon}
-                        href={link.href}
-                      />
-                    </Row>
-                  ))}
-                </>
-              ))}
-            </StyledCard>
-          </Col>
-        </Row>
-        <Footer />
+            <Button
+              href={Links.youtube}
+              label={width > 1000 ? "Start Learning" : ""}
+              icon={Brands.faYoutube}
+            />
+            {width > 1000 && (
+              <Copyright>
+                Copyright &copy; Comp-3 Interactive 2019-{Functions.GetYear()}.
+                <br />
+                All rights reserved
+              </Copyright>
+            )}
+          </HeaderContent>
+        </HeaderBar>
+        <ContentArea>
+          <ContentAreaLinks>
+            <NavButton
+              icon={Icons.faHome}
+              label={"Home"}
+              isSelected={selectedIndex === 0}
+              onClick={() => {
+                setSelectedIndex(0);
+                setCurrentPageContent(PageContent.HomeContent);
+              }}
+            />
+            <NavButton
+              icon={Icons.faCalendarAlt}
+              label={"Events"}
+              isSelected={selectedIndex === 1}
+              onClick={() => {
+                setSelectedIndex(1);
+                setCurrentPageContent(PageContent.Events);
+              }}
+            />
+            <NavButton
+              icon={Icons.faCloudDownloadAlt}
+              label={"Downloads"}
+              isSelected={selectedIndex === 2}
+              onClick={() => {
+                setSelectedIndex(2);
+                setCurrentPageContent(PageContent.Downloads);
+              }}
+            />
+            <NavButton
+              icon={Icons.faPlayCircle}
+              label={"Games"}
+              isSelected={selectedIndex === 3}
+              onClick={() => {
+                setSelectedIndex(3);
+                setCurrentPageContent(PageContent.Games);
+              }}
+            />
+            <NavButton
+              icon={Icons.faHeartbeat}
+              label={"Support"}
+              isSelected={selectedIndex === 4}
+              onClick={() => {
+                setSelectedIndex(4);
+                setCurrentPageContent(PageContent.Support);
+              }}
+            />
+          </ContentAreaLinks>
+          <ContentAreaContent>{currentPageContent}</ContentAreaContent>
+          {width <= 1000 && (
+            <Copyright>
+              Copyright &copy; Comp-3 Interactive 2019-{Functions.GetYear()}.
+              <br />
+              All rights reserved
+            </Copyright>
+          )}
+        </ContentArea>
       </PageWrapper>
-    </Container>
+    </>
   );
 };

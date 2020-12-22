@@ -32,7 +32,7 @@ export const CloseButton = styled.button`
   background: none;
   color: ${Tokens.Colour.offWhite};
   text-decoration: none;
-  font-size: ${Tokens.Font.sizes.tiny};
+  font-size: ${Tokens.FontSize.tiny};
   font-weight: bold;
 `;
 

@@ -9,4 +9,7 @@ export enum Links {
   discord = "https://discord.gg/wWFsdYy",
   twitter = "https://www.twitter.com/comp3int",
   invaders = "https://www.youtube.com/playlist?list=PLfhbBaEcybmhGhADxKSqqliuCLg3xY_ep",
+  wordDrop = "https://play.google.com/store/apps/details?id=com.Comp3Interactive.WordDrop&hl=en_GB&gl=US",
+  ascension = "https://play.google.com/store/apps/details?id=com.Comp3Interactive.Ascension&hl=en_GB&gl=US",
+  invadersGame = "https://play.google.com/store/apps/details?id=com.Comp3Interactive.InvadersFromOuterspace&hl=en_GB&gl=US",
 }
