@@ -7,7 +7,7 @@ export const Events = () => {
       <PageHeader>Events</PageHeader>
       <SectionHeader>Current Events</SectionHeader>
       <Card>
-        <P>Unfortunatly, there are no events active at the moment.</P>
+        <P>Unfortunately, there are no events active at the moment.</P>
         <P>Check back soon for more game jams!</P>
       </Card>
 
