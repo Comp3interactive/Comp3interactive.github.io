@@ -24,11 +24,11 @@ export const Downloads = () => {
       <PageHeader>Downloads</PageHeader>
       <Card>
         <P>
-          Other than tutorials, we also offer a selection of free and premium
-          assets for use in your own games! These range from code snippets and
-          utility functions which can be downloaded via out GitHub Page to a
-          mixture of 2D and 3D game assets, pixel art sprites, UI assets and
-          models available from out Itch.io page! Check out the links below!
+          We offer a selection of free and premium assets for use in your own
+          games! These range from code snippets and utility functions which can
+          be downloaded via out GitHub Page to a mixture of 2D and 3D game
+          assets, pixel art sprites, UI assets and models available from out
+          Itch.io page! Check out the links below!
         </P>
       </Card>
 
