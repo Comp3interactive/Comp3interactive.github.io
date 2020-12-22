@@ -135,7 +135,7 @@ export const Home = () => {
       <PageWrapper>
         <HeaderBar>
           <HeaderContent>
-            <LogoContainer src="./Images/Bottlecaps/Comp3.png" />
+            <LogoContainer src="./Images/Bottlecaps/comp3.png" />
             <LogoTextWrapper>
               <WhiteHeader>Comp-3 Interactive</WhiteHeader>
               <SubHeader>Subscribe.Follow.Learn()</SubHeader>
