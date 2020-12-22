@@ -154,6 +154,7 @@ export const Home = () => {
               href={Links.youtube}
               label={width > 1000 ? "Start Learning" : ""}
               icon={Brands.faYoutube}
+              isExternalLink={true}
             />
             {width > 1000 && (
               <Copyright>
