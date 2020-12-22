@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { PageHeader, SectionHeader, P, Button, Card } from "../../Components";
 import { Links } from "../../Utils/ExternalLinks";
+import * as Brands from "@fortawesome/free-brands-svg-icons";
 
 export const StyledEvent = styled.div`
   text-align: center;
@@ -67,6 +68,7 @@ export const HomeContent = () => {
             isExternalLink={true}
             label={"Go To Series"}
             width={"90%"}
+            icon={Brands.faYoutube}
           />
         </div>
 

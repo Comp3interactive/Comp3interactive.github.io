@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "@emotion/styled";
 import {
   BackgroundShapes,
@@ -129,6 +129,15 @@ export const Home = () => {
     PageContent.HomeContent
   );
 
+  const scrollToTop = useRef<null | HTMLDivElement>(null);
+  useEffect(() => {
+    if (scrollToTop.current !== null)
+      scrollToTop!.current!.scrollIntoView({
+        block: "end",
+        behavior: "smooth",
+      });
+  }, [currentPageContent]);
+
   return (
     <>
       <BackgroundShapes color01={Colour.accent01} color02={Colour.accent02} />
@@ -203,7 +212,10 @@ export const Home = () => {
               }}
             />
           </ContentAreaLinks>
-          <ContentAreaContent>{currentPageContent}</ContentAreaContent>
+          <ContentAreaContent>
+            <div ref={scrollToTop} />
+            {currentPageContent}
+          </ContentAreaContent>
           {width <= 1000 && (
             <Copyright>
               Copyright &copy; Comp-3 Interactive 2019-{Functions.GetYear()}.
