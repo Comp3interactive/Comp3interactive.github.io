@@ -35,7 +35,8 @@ export const StyledButton = styled.button<ButtonProps>`
 
 export const StyledNavButton = styled.button<NavButtonProps>`
   @media only screen and (max-width: 1000px) {
-    font-size: ${Tokens.FontSize.medium};
+    font-size: ${(props) =>
+      props.iconSize ? props.iconSize : Tokens.FontSize.medium};
   }
 
   display: inline-block;
@@ -44,7 +45,8 @@ export const StyledNavButton = styled.button<NavButtonProps>`
     props.isSelected ? Tokens.Colour.accent01 : Tokens.Colour.offWhite};
   width: auto;
   text-decoration: none;
-  font-size: ${Tokens.FontSize.large};
+  font-size: ${(props) =>
+    props.iconSize ? props.iconSize : Tokens.FontSize.large};
   transition: all 0.2s;
   text-align: center;
   border: none;

@@ -5,6 +5,6 @@ export interface SpaceProps {
 }
 
 export const Space = styled.div<SpaceProps>`
-  padding-top: ${(props) => props.height / 2}px;
-  padding-bottom: ${(props) => props.height / 2}px;
+  margin-top: ${(props) => props.height / 2}px;
+  margin-bottom: ${(props) => props.height / 2}px;
 `;

@@ -55,3 +55,15 @@ export const Copyright = styled.div`
   font-weight: ${FontWeight.extraLight};
   text-align: center;
 `;
+
+export const Tag1 = styled.div`
+  color: ${Colour.offWhite};
+  font-size: ${FontSize.small};
+  font-weight: ${FontWeight.extraLight};
+`;
+
+export const Tag2 = styled.div`
+  color: ${Colour.white};
+  font-size: ${FontSize.tiny};
+  font-weight: ${FontWeight.extraLight};
+`;

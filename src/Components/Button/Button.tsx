@@ -17,6 +17,7 @@ export interface NavButtonProps {
   href?: string;
   label?: string;
   icon: IconDefinition;
+  iconSize?: string;
   isExternalLink?: boolean;
   isSelected: boolean;
   onClick?: () => void;
@@ -58,6 +59,7 @@ export const NavButton: React.FC<NavButtonProps> = ({
   href,
   label,
   icon,
+  iconSize,
   isExternalLink,
   isSelected,
   onClick,
@@ -66,6 +68,7 @@ export const NavButton: React.FC<NavButtonProps> = ({
     <StyledNavButton
       href={href}
       icon={icon}
+      iconSize={iconSize}
       isSelected={isSelected}
       onClick={
         isExternalLink ? () => externalLinkCick(href ? href : "") : onClick

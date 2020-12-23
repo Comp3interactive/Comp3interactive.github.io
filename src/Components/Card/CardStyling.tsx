@@ -19,6 +19,8 @@ export const StyledCard = styled.div<CardProps>`
   border-radius: 15px;
   padding: 10px;
   margin: 10px;
+
+  width: ${(props) => (props.width ? props.width : null)};
 `;
 
 export const StyledCardDeck = styled.div`

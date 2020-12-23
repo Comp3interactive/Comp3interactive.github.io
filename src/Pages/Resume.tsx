@@ -5,7 +5,6 @@ import {
   Colour,
   WhiteHeader,
   SubHeader,
-  Button,
   Copyright,
   NavButton,
 } from "../Components";
@@ -14,7 +13,7 @@ import * as Icons from "@fortawesome/free-solid-svg-icons";
 import { Links } from "../Utils/ExternalLinks";
 import useWindowDimensions from "../Hooks/ScreenSize";
 import * as Functions from "../Utils/Functions";
-import * as PageContent from "./Content";
+import * as PageContent from "./Content/Resume";
 
 const PageWrapper = styled.div`
   @media only screen and (min-width: 1001px) {
@@ -103,6 +102,9 @@ const LogoContainer = styled.img`
   }
 
   height: 200px;
+
+  -webkit-filter: drop-shadow(5px 5px 5px ${Colour.darkGrey});
+  filter: drop-shadow(5px 5px 5px ${Colour.darkGrey});
 `;
 
 const LogoTextWrapper = styled.div`
@@ -122,12 +124,12 @@ export const Image = styled.img`
   height: auto;
 `;
 
-export const Home = () => {
+export const Resume = () => {
   const { width } = useWindowDimensions();
 
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [currentPageContent, setCurrentPageContent] = useState(
-    PageContent.HomeContent
+    PageContent.AboutMe
   );
 
   const scrollToTop = useRef<null | HTMLDivElement>(null);
@@ -145,58 +147,23 @@ export const Home = () => {
       <PageWrapper>
         <HeaderBar>
           <HeaderContent>
-            <LogoContainer src="./Images/Bottlecaps/comp3.png" />
+            <LogoContainer src="./Images/Me.png" />
             <LogoTextWrapper>
-              <WhiteHeader>Comp-3 Interactive</WhiteHeader>
-              <SubHeader>Subscribe.Follow.Learn()</SubHeader>
+              <WhiteHeader>Mike Lythgoe</WhiteHeader>
+              <SubHeader>Jack of All Trades</SubHeader>
             </LogoTextWrapper>
 
-            <Button
-              href={Links.youtube}
-              label={width > 1000 ? "Start Learning" : ""}
-              icon={Brands.faYoutube}
-              isExternalLink={true}
-            />
             {width > 1000 && (
               <>
-                <div>
-                  <NavButton
-                    href={Links.facebook}
-                    isExternalLink={true}
-                    icon={Brands.faFacebook}
-                    iconSize={"20px"}
-                    isSelected={false}
-                  />
-
-                  <NavButton
-                    href={Links.instagram}
-                    isExternalLink={true}
-                    icon={Brands.faInstagram}
-                    iconSize={"20px"}
-                    isSelected={false}
-                  />
-
-                  <NavButton
-                    href={Links.twitter}
-                    isExternalLink={true}
-                    icon={Brands.faTwitter}
-                    iconSize={"20px"}
-                    isSelected={false}
-                  />
-
-                  <NavButton
-                    href={Links.discord}
-                    isExternalLink={true}
-                    icon={Brands.faDiscord}
-                    iconSize={"20px"}
-                    isSelected={false}
-                  />
-                </div>
-
+                <NavButton
+                  href={Links.linkedin}
+                  isExternalLink={true}
+                  icon={Brands.faLinkedin}
+                  iconSize={"20px"}
+                  isSelected={false}
+                />
                 <Copyright>
-                  Copyright &copy; Comp-3 Interactive 2019-{Functions.GetYear()}
-                  <br />
-                  All rights reserved
+                  Copyright &copy; Mike Lythgoe 1990-{Functions.GetYear()}.
                 </Copyright>
               </>
             )}
@@ -205,73 +172,59 @@ export const Home = () => {
         <ContentArea>
           <ContentAreaLinks>
             <NavButton
-              icon={Icons.faHome}
-              label={"Home"}
+              icon={Icons.faIdBadge}
+              label={"About"}
               isSelected={selectedIndex === 0}
               onClick={() => {
                 setSelectedIndex(0);
-                setCurrentPageContent(PageContent.HomeContent);
+                setCurrentPageContent(PageContent.AboutMe);
               }}
             />
             <NavButton
-              icon={Icons.faCalendarAlt}
-              label={"Events"}
+              icon={Icons.faLaptopCode}
+              label={"Experience"}
               isSelected={selectedIndex === 1}
               onClick={() => {
                 setSelectedIndex(1);
-                setCurrentPageContent(PageContent.Events);
+                setCurrentPageContent(PageContent.Experience);
               }}
             />
             <NavButton
-              icon={Icons.faCloudDownloadAlt}
-              label={"Downloads"}
+              icon={Icons.faUniversity}
+              label={"Education"}
               isSelected={selectedIndex === 2}
               onClick={() => {
                 setSelectedIndex(2);
-                setCurrentPageContent(PageContent.Downloads);
+                setCurrentPageContent(PageContent.Education);
               }}
             />
             <NavButton
-              icon={Icons.faPlayCircle}
-              label={"Games"}
+              icon={Icons.faAt}
+              label={"Contact"}
               isSelected={selectedIndex === 3}
               onClick={() => {
                 setSelectedIndex(3);
-                setCurrentPageContent(PageContent.Games);
+                setCurrentPageContent(PageContent.Contact);
               }}
             />
-            <NavButton
-              icon={Icons.faHeartbeat}
-              label={"Support"}
-              isSelected={selectedIndex === 4}
-              onClick={() => {
-                setSelectedIndex(4);
-                setCurrentPageContent(PageContent.Support);
-              }}
-            />
-
             {width < 1000 && (
               <NavButton
-                icon={Icons.faLink}
-                label={"Links"}
-                isSelected={selectedIndex === 5}
-                onClick={() => {
-                  setSelectedIndex(5);
-                  setCurrentPageContent(PageContent.LinksContent);
-                }}
+                href={Links.linkedin}
+                isExternalLink={true}
+                icon={Brands.faLinkedin}
+                label="LinkedIn"
+                iconSize={"20px"}
+                isSelected={false}
               />
             )}
           </ContentAreaLinks>
-
           <ContentAreaContent>
             <div ref={scrollToTop} />
             {currentPageContent}
           </ContentAreaContent>
           {width <= 1000 && (
             <Copyright>
-              Copyright &copy; Comp-3 Interactive 2019-{Functions.GetYear()}
-              <br />
-              All rights reserved
+              Copyright &copy; Mike Lythgoe 1990-{Functions.GetYear()}.
             </Copyright>
           )}
         </ContentArea>

@@ -15,37 +15,41 @@ export const Image = styled.img`
 
   border-radius: 15px;
   width: 50%;
-  height: auto;
+  height: 100%;
+  margin: auto;
 `;
 
 export const HomeContent = () => {
   return (
     <>
       <PageHeader>Welcome</PageHeader>
-      <Card>
-        <P>
-          We are Comp-3 Interactive. We provide useful hints, tips and tutorials
-          on the Unity3D game engine over multiple social media platforms.
-          Started in 2019 with one goal, to provide the tutorials we wish we had
-          ourselves when we started to learn game development.
-        </P>
-        <P>
-          Over the past year we have grown a nice little following over on
-          Facebook and Instagram of developers eager to learn new things, we
-          then branched into YouTube to be able to give a more in-depth
-          experience.
-        </P>
-        <P>
-          Not only that, we also offer a selection of free and paid assets which
-          are available to download via out Itch.io page and also via GitHub for
-          code snippets and utilities.
-        </P>
-        <P>
-          Check out the links below to learn more about the services we offer
-          and find links to where you can find us, or if you're in a hurry to
-          get learning you can click here to be taken directly to our YouTube
-          page! Just don't forget to like, comment and subscribe!
-        </P>
+      <Card wrapContent={true}>
+        <div>
+          <P>
+            We are Comp-3 Interactive. We provide useful hints, tips and
+            tutorials on the Unity3D game engine over multiple social media
+            platforms. Started in 2019 with one goal, to provide the tutorials
+            we wish we had ourselves when we started to learn game development.
+          </P>
+          <P>
+            Over the past year we have grown a nice little following over on
+            Facebook and Instagram of developers eager to learn new things, we
+            then branched into YouTube to be able to give a more in-depth
+            experience.
+          </P>
+          <P>
+            Not only that, we also offer a selection of free and paid assets
+            which are available to download via out Itch.io page and also via
+            GitHub for code snippets and utilities.
+          </P>
+          <P>
+            Check out the links below to learn more about the services we offer
+            and find links to where you can find us, or if you're in a hurry to
+            get learning you can click here to be taken directly to our YouTube
+            page! Just don't forget to like, comment and subscribe!
+          </P>
+        </div>
+        <Image src="./Images/Me2.jpeg" />
       </Card>
 
       <SectionHeader>Suggested Series</SectionHeader>

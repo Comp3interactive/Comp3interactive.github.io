@@ -12,4 +12,5 @@ export enum Links {
   wordDrop = "https://play.google.com/store/apps/details?id=com.Comp3Interactive.WordDrop&hl=en_GB&gl=US",
   ascension = "https://play.google.com/store/apps/details?id=com.Comp3Interactive.Ascension&hl=en_GB&gl=US",
   invadersGame = "https://play.google.com/store/apps/details?id=com.Comp3Interactive.InvadersFromOuterspace&hl=en_GB&gl=US",
+  linkedin = "https://www.linkedin.com/in/michael-lythgoe/",
 }
