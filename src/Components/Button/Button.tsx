@@ -59,6 +59,7 @@ export interface ButtonProps {
   width?: string;
   icon?: IconDefinition;
   isInternalLink?: boolean;
+  ariaLabel?: string;
   onClick?: () => void;
 }
 
@@ -66,6 +67,7 @@ export interface TextButtonProps {
   label: string;
   icon?: IconDefinition;
   colour?: string;
+  ariaLabel?: string;
   onClick?: () => void;
 }
 
@@ -81,6 +83,7 @@ export const Button: React.FC<ButtonProps> = ({
   icon,
   isInternalLink,
   onClick,
+  ariaLabel,
 }) => {
   return (
     <StyledButton
@@ -89,6 +92,8 @@ export const Button: React.FC<ButtonProps> = ({
       icon={icon}
       width={width}
       onClick={isInternalLink ? onClick : () => externalLinkCick(href)}
+      ariaLabel={ariaLabel}
+      aria-label={ariaLabel}
     >
       {icon ? (
         <>
@@ -105,6 +110,7 @@ export const TextButton: React.FC<TextButtonProps> = ({
   label,
   icon,
   colour,
+  ariaLabel,
   onClick,
 }) => {
   return (
@@ -113,6 +119,8 @@ export const TextButton: React.FC<TextButtonProps> = ({
       icon={icon}
       onClick={onClick}
       colour={colour}
+      aria-label={ariaLabel}
+      ariaLabel={ariaLabel}
     >
       {icon ? (
         <>

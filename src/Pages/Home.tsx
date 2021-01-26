@@ -70,6 +70,7 @@ export const Home = (width: number) => {
             href={Links.youtube}
             label="Start Learning Now"
             icon={Brands.faYoutube}
+            ariaLabel={"Start Learning Now YouTube Link"}
           />
           <br />
         </Card>
