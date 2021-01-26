@@ -10,13 +10,7 @@ import { Projects } from "./Pages/Projects";
 import { Events } from "./Pages/Events";
 import { Support } from "./Pages/Support";
 import { FourZeroFour } from "./Pages/404";
-import {
-  BackgroundShapes,
-  Header,
-  NavLinks,
-  InfoBar,
-  Footer,
-} from "./Components";
+import { BackgroundShapes, Header, NavLinks, Footer } from "./Components";
 import styled from "@emotion/styled";
 import * as Tokens from "./Components/.Design/Tokens";
 import useWindowDimensions from "./Hooks/ScreenSize";
@@ -31,6 +25,17 @@ const Wrap = styled.div<{ width: number }>`
     props.width < 600 ? "100%" : props.width < 1300 ? "90%" : "60%"};
 `;
 
+const StickyMobile = styled.div<{ width: number }>`
+  ${(props) =>
+    props.width < 600 &&
+    `position: fixed; background-color: ${Tokens.Colour.background};`}
+`;
+
+const MobileHeaderPadding = styled.div`
+  height: 70px;
+  margin-bottom: 6rem;
+`;
+
 function App() {
   const { width } = useWindowDimensions();
 
@@ -39,9 +44,12 @@ function App() {
       <Router basename="/">
         <ScrollToTop />
         <BackgroundShapes />
-        <Header />
-        <NavLinks />
-        <InfoBar />
+
+        <StickyMobile width={width}>
+          <Header />
+          <NavLinks width={width} />
+        </StickyMobile>
+        {width < 600 && <MobileHeaderPadding />}
 
         <Switch>
           <Route path={"/"} exact component={() => Home(width)} />

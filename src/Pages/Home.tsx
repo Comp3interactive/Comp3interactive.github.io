@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { Card, Button } from "../Components";
+import { Card, Button, InfoBar } from "../Components";
 import * as Tokens from "../Components/.Design/Tokens";
 import * as Typo from "../Components/Typography/Typography";
 import { Grid } from "@material-ui/core";
@@ -26,6 +26,9 @@ const IconWrapper = styled.span`
 export const Home = (width: number) => {
   return (
     <Grid container>
+      <Grid item xs={12}>
+        <InfoBar />
+      </Grid>
       <Grid item sm={7} xs={12}>
         <Card>
           <Typo.SectionHeader>

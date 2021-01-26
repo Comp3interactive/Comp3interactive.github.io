@@ -3,15 +3,21 @@ import { TextButton } from "../Button/Button";
 import { useHistory } from "react-router-dom";
 import * as Tokens from "../.Design/Tokens";
 import styled from "@emotion/styled";
+import * as Icons from "@fortawesome/free-solid-svg-icons";
 
 const NavLinkWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   align-content: center;
+  flex-wrap: wrap;
 `;
 
-export const NavLinks = () => {
+interface NavLinkProps {
+  width: number;
+}
+
+export const NavLinks = ({ width }: NavLinkProps) => {
   const history = useHistory();
 
   const [activePage, setActivePage] = useState("Home");
@@ -26,31 +32,36 @@ export const NavLinks = () => {
   return (
     <NavLinkWrapper>
       <TextButton
-        label={"Home"}
+        label={width >= 600 ? "Home" : ""}
+        icon={Icons.faHome}
         onClick={() => onClick("/", "Home")}
         colour={activePage === "Home" ? Tokens.Colour.accent01 : undefined}
       />
 
       <TextButton
-        label={"Projects"}
+        label={width >= 600 ? "Projects" : ""}
+        icon={Icons.faLaptopCode}
         onClick={() => onClick("/Projects", "Projects")}
         colour={activePage === "Projects" ? Tokens.Colour.accent01 : undefined}
       />
 
       <TextButton
-        label={"Downloads"}
+        label={width >= 600 ? "Downloads" : ""}
+        icon={Icons.faDownload}
         onClick={() => onClick("/Downloads", "Downloads")}
         colour={activePage === "Downloads" ? Tokens.Colour.accent01 : undefined}
       />
 
       <TextButton
-        label={"Events"}
+        label={width >= 600 ? "Events" : ""}
+        icon={Icons.faCalendar}
         onClick={() => onClick("/Events", "Events")}
         colour={activePage === "Events" ? Tokens.Colour.accent01 : undefined}
       />
 
       <TextButton
-        label={"Support"}
+        label={width >= 600 ? "Support" : ""}
+        icon={Icons.faHeartbeat}
         onClick={() => onClick("/Support", "Support")}
         colour={activePage === "Support" ? Tokens.Colour.accent01 : undefined}
       />

@@ -38,7 +38,7 @@ export const StyledTextButton = styled.button<TextButtonProps>`
   border: none;
   color: ${(props) => (props.colour ? props.colour : Tokens.Colour.offWhite)};
   background-color: transparent;
-  width: 100%;
+  width: auto;
   text-decoration: none;
   font-size: ${Tokens.FontSize.small};
   font-weight: ${Tokens.FontWeight.semiBold};
