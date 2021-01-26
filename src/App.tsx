@@ -10,20 +10,55 @@ import { Projects } from "./Pages/Projects";
 import { Events } from "./Pages/Events";
 import { Support } from "./Pages/Support";
 import { FourZeroFour } from "./Pages/404";
+import {
+  BackgroundShapes,
+  Header,
+  NavLinks,
+  InfoBar,
+  Footer,
+} from "./Components";
+import styled from "@emotion/styled";
+import * as Tokens from "./Components/.Design/Tokens";
+import useWindowDimensions from "./Hooks/ScreenSize";
+import { Grid } from "@material-ui/core";
+
+const Wrap = styled.div<{ width: number }>`
+  display: block;
+  background-color: ${Tokens.Colour.darkGrey};
+  margin-left: auto;
+  margin-right: auto;
+  width: ${(props) =>
+    props.width < 600 ? "100%" : props.width < 1300 ? "90%" : "60%"};
+`;
 
 function App() {
+  const { width } = useWindowDimensions();
+
   return (
-    <Router basename="/">
-      <ScrollToTop />
-      <Switch>
-        <Route path={"/"} exact component={Home} />
-        <Route path={"/Downloads"} exact component={Downloads} />
-        <Route path={"/Projects"} exact component={Projects} />
-        <Route path={"/Events"} exact component={Events} />
-        <Route path={"/Support"} exact component={Support} />
-        <Route component={FourZeroFour} />
-      </Switch>
-    </Router>
+    <Wrap width={width}>
+      <Router basename="/">
+        <ScrollToTop />
+        <BackgroundShapes />
+        <Header />
+        <NavLinks />
+        <InfoBar />
+
+        <Switch>
+          <Route path={"/"} exact component={() => Home(width)} />
+          <Route path={"/Downloads"} exact component={() => Downloads(width)} />
+          <Route path={"/Projects"} exact component={() => Projects(width)} />
+          <Route path={"/Events"} exact component={() => Events(width)} />
+          <Route path={"/Support"} exact component={() => Support(width)} />
+          <Route component={() => FourZeroFour(width)} />
+        </Switch>
+      </Router>
+
+      <Grid container>
+        <Grid item md={12} xs={12}>
+          <Footer />
+        </Grid>
+      </Grid>
+    </Wrap>
   );
 }
 

@@ -1,20 +1,45 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-import { Copyright } from "../Components";
-import useWindowDimensions from "../Hooks/ScreenSize";
-import * as DateHelper from "../Utils/DateHelper";
+import * as Typo from "../Components/Typography/Typography";
+import styled from "@emotion/styled";
+import { Card } from "../Components";
 
-export const FourZeroFour = () => {
-  const history = useHistory();
-  const { width } = useWindowDimensions();
+const Wrapper404 = styled.div<{ width: number }>`
+  ${(props) => props.width > 600 && "display: flex;"};
+`;
 
+const Styled404 = styled.img<{ width: number }>`
+  ${(props) =>
+    props.width > 600
+      ? "width: 20%; height: 20%; margin: 50px;"
+      : "width:100%; margin-top: 20px;"};
+`;
+
+export const FourZeroFour = (width: number) => {
   return (
-    <>
-      <Copyright>
-        Copyright &copy; Comp-3 Interactive 2019-{DateHelper.GetYear()}.
-        <br />
-        All rights reserved
-      </Copyright>
-    </>
+    <Card>
+      <Wrapper404 width={width}>
+        <Styled404 src="Images/Illustrations/404.png" width={width} />
+
+        <div>
+          <Typo.SectionHeader>STOP SCREWING AROUND</Typo.SectionHeader>
+
+          <Typo.P>
+            This page doesn't exist, if you think this might be an error then
+            please let me know so I can fix it!
+          </Typo.P>
+
+          <Typo.P>
+            If you were just messing about in the URL bar then sorry, no easter
+            eggs for you here... Click the links at the top of the page to
+            navigate back to an ACTUAL page!
+          </Typo.P>
+
+          <Typo.P>
+            But since you have this kind of free time, maybe you should be
+            watching my tutorials on YouTube... Just a thought!
+          </Typo.P>
+        </div>
+      </Wrapper404>
+    </Card>
   );
 };
