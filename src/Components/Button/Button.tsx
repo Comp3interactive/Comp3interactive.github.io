@@ -1,25 +1,71 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { StyledButton, StyledNavButton } from "./ButtonStyling";
-import { NavLabel } from "../Typography/Typography";
+import styled from "@emotion/styled";
+import * as Tokens from "../.Design/Tokens";
 
+export const StyledButton = styled.button<ButtonProps>`
+  padding: 10px;
+  border: 0.125rem solid transparent;
+  border-radius: 5px;
+  background-color: ${Tokens.Colour.accent01};
+  color: ${Tokens.Colour.offWhite};
+  width: ${(props) => (props.width ? props.width : "100%")};
+  text-decoration: none;
+  font-size: ${Tokens.FontSize.small};
+  font-weight: ${Tokens.FontWeight.light};
+  transition: all 0.2s;
+  text-align: center;
+  ${(props) =>
+    !props.width
+      ? "display: flex; justify-content: center; align-items: center;"
+      : null}
+  &:hover {
+    border: 0.125rem solid ${Tokens.Colour.accent01};
+    cursor: pointer;
+    background-color: ${Tokens.Colour.offWhite};
+    color: ${Tokens.Colour.accent01};
+    font-weight: ${Tokens.FontWeight.semiBold};
+  }
+  &:focus,
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const StyledTextButton = styled.button<TextButtonProps>`
+  padding: 10px;
+  border: none;
+  color: ${(props) => (props.colour ? props.colour : Tokens.Colour.offWhite)};
+  background-color: transparent;
+  width: 100%;
+  text-decoration: none;
+  font-size: ${Tokens.FontSize.small};
+  font-weight: ${Tokens.FontWeight.semiBold};
+  transition: all 0.2s;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+    color: ${Tokens.Colour.accent01};
+  }
+  &:focus,
+  &:focus {
+    outline: none;
+  }
+`;
 export interface ButtonProps {
   href: string;
   label?: string;
   width?: string;
   icon?: IconDefinition;
-  isExternalLink?: boolean;
+  isInternalLink?: boolean;
   onClick?: () => void;
 }
 
-export interface NavButtonProps {
-  href?: string;
-  label?: string;
-  icon: IconDefinition;
-  iconSize?: string;
-  isExternalLink?: boolean;
-  isSelected: boolean;
+export interface TextButtonProps {
+  label: string;
+  icon?: IconDefinition;
+  colour?: string;
   onClick?: () => void;
 }
 
@@ -33,7 +79,7 @@ export const Button: React.FC<ButtonProps> = ({
   label,
   width,
   icon,
-  isExternalLink,
+  isInternalLink,
   onClick,
 }) => {
   return (
@@ -42,7 +88,7 @@ export const Button: React.FC<ButtonProps> = ({
       label={label}
       icon={icon}
       width={width}
-      onClick={isExternalLink ? () => externalLinkCick(href) : onClick}
+      onClick={isInternalLink ? onClick : () => externalLinkCick(href)}
     >
       {icon ? (
         <>
@@ -55,27 +101,26 @@ export const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export const NavButton: React.FC<NavButtonProps> = ({
-  href,
+export const TextButton: React.FC<TextButtonProps> = ({
   label,
   icon,
-  iconSize,
-  isExternalLink,
-  isSelected,
+  colour,
   onClick,
 }) => {
   return (
-    <StyledNavButton
-      href={href}
+    <StyledTextButton
+      label={label}
       icon={icon}
-      iconSize={iconSize}
-      isSelected={isSelected}
-      onClick={
-        isExternalLink ? () => externalLinkCick(href ? href : "") : onClick
-      }
+      onClick={onClick}
+      colour={colour}
     >
-      <FontAwesomeIcon icon={icon} />
-      <NavLabel>{label}</NavLabel>
-    </StyledNavButton>
+      {icon ? (
+        <>
+          <FontAwesomeIcon icon={icon} /> {label ? <>&nbsp; {label}</> : null}
+        </>
+      ) : (
+        label
+      )}
+    </StyledTextButton>
   );
 };

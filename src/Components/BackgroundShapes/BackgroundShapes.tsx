@@ -1,14 +1,7 @@
 import styled from "@emotion/styled";
-import img from "../../Images/BG_Shapes.png";
 
-interface GradientProps {
-  color01: string;
-  color02: string;
-}
-
-export const BackgroundShapes = styled.div<GradientProps>`
-  background-image: url(${img}),
-    linear-gradient(${(props) => props.color01}, ${(props) => props.color02});
+export const BackgroundShapes = styled.div`
+  background-image: url("/Images/Branding/BG_Shapes.png");
   position: fixed;
   width: auto;
   height: auto;
@@ -20,4 +13,5 @@ export const BackgroundShapes = styled.div<GradientProps>`
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
+  opacity: 0.2;
 `;

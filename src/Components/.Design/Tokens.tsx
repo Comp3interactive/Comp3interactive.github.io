@@ -1,11 +1,13 @@
 export enum Colour {
-  darkGrey = "#222222",
-  midDarkGrey = "#333333",
-  midGrey = "#444444",
-  lightGrey = "#bbbbbb",
+  background = "#191922",
+  darkGrey = "1e1e27",
+  midGrey = "#2c2c37",
+  lightGrey = "#8c8c8e",
   offWhite = "#f5f5f5",
+
   white = "#ffffff",
   black = "#000000",
+
   accent01 = "#8e3ce9",
   accent02 = "#4a51e0",
 }
