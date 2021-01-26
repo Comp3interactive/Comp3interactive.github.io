@@ -32,7 +32,7 @@ const StickyMobile = styled.div<{ width: number }>`
 `;
 
 const MobileHeaderPadding = styled.div`
-  height: 70px;
+  height: 20px;
   margin-bottom: 6rem;
 `;
 
@@ -46,7 +46,7 @@ function App() {
         <BackgroundShapes />
 
         <StickyMobile width={width}>
-          <Header />
+          <Header width={width} />
           <NavLinks width={width} />
         </StickyMobile>
         {width < 600 && <MobileHeaderPadding />}

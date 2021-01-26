@@ -39,7 +39,7 @@ export const HighlightSectionHeader = styled.span<{ color: string }>`
 
 export const Copyright = styled.div`
   color: ${Colour.lightGrey};
-  font-size: ${FontSize.small};
+  font-size: ${FontSize.tiny};
   font-weight: ${FontWeight.light};
   text-align: center;
 `;
