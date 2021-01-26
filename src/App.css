@@ -1,5 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: black;
+  background-color: #191922;
 }
 
 ::-webkit-scrollbar {

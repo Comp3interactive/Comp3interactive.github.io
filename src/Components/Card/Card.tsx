@@ -1,29 +1,20 @@
 import React from "react";
-import { StyledCard, StyledCardDeck } from "./CardStyling";
-import { SectionHeader } from "../Typography/Typography";
+import styled from "@emotion/styled";
+import * as Tokens from "../.Design/Tokens";
 
-export interface CardProps {
-  wrapContent?: boolean;
-  width?: string;
+interface CardProps {
+  children: React.ReactNode;
 }
 
-export interface CardDeckProps {
-  header?: string;
-}
+const StyledCard = styled.div`
+  min-width: 100px;
+  height: auto;
+  background-color: ${Tokens.Colour.midGrey};
+  margin: 20px;
+  border-radius: 5px;
+  padding: 1px 20px;
+`;
 
-export const Card: React.FC<CardProps> = ({ wrapContent, width, children }) => {
-  return (
-    <StyledCard wrapContent={wrapContent} width={width}>
-      {children}
-    </StyledCard>
-  );
-};
-
-export const CardDeck: React.FC<CardDeckProps> = ({ header, children }) => {
-  return (
-    <>
-      {header ? <SectionHeader>{header}</SectionHeader> : null};
-      <StyledCardDeck>{children}</StyledCardDeck>)
-    </>
-  );
+export const Card = ({ children }: CardProps) => {
+  return <StyledCard>{children}</StyledCard>;
 };

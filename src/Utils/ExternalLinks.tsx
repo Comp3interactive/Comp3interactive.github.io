@@ -8,6 +8,7 @@ export enum Links {
   googleplay = "https://play.google.com/store/apps/dev?id=7011346453411226050",
   discord = "https://discord.gg/wWFsdYy",
   twitter = "https://www.twitter.com/comp3int",
+  behindClosedDoorsTwitter = "https://www.twitter.com/BCD_Game",
   invaders = "https://www.youtube.com/playlist?list=PLfhbBaEcybmhGhADxKSqqliuCLg3xY_ep",
   wordDrop = "https://play.google.com/store/apps/details?id=com.Comp3Interactive.WordDrop&hl=en_GB&gl=US",
   ascension = "https://play.google.com/store/apps/details?id=com.Comp3Interactive.Ascension&hl=en_GB&gl=US",
