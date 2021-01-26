@@ -54,7 +54,7 @@ export const NavLinks = ({ width }: NavLinkProps) => {
 
       <TextButton
         label={width >= 600 ? "Events" : ""}
-        icon={Icons.faCalendar}
+        icon={Icons.faCalendarAlt}
         onClick={() => onClick("/Events", "Events")}
         colour={activePage === "Events" ? Tokens.Colour.accent01 : undefined}
       />
