@@ -19,6 +19,7 @@ export const Header = ({ width }: HeaderProps) => {
           ? "Images/Branding/Header.png"
           : "Images/Branding/MobileHeader.png"
       }
+      alt={"Comp-3 Interactive header"}
     />
   );
 };

@@ -40,7 +40,7 @@ function App() {
   const { width } = useWindowDimensions();
 
   return (
-    <Wrap width={width}>
+    <Wrap width={width} role="main">
       <Router basename="/">
         <ScrollToTop />
         <BackgroundShapes />

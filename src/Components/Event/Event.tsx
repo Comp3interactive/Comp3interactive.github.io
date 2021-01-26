@@ -60,7 +60,7 @@ export const Event = ({
           <Button href={winnerHref} label={`Play ${winningEntry} Here`} />
           <br />
         </LeftSide>
-        <StyledImage src={imageURL} />
+        <StyledImage src={imageURL} alt={`${winningEntry} Screenshot`} />
       </StyledEvent>
     </Card>
   );

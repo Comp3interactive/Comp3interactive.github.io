@@ -36,6 +36,7 @@ export const NavLinks = ({ width }: NavLinkProps) => {
         icon={Icons.faHome}
         onClick={() => onClick("/", "Home")}
         colour={activePage === "Home" ? Tokens.Colour.accent01 : undefined}
+        aria-label={"Home page"}
       />
 
       <TextButton
@@ -43,6 +44,7 @@ export const NavLinks = ({ width }: NavLinkProps) => {
         icon={Icons.faLaptopCode}
         onClick={() => onClick("/Projects", "Projects")}
         colour={activePage === "Projects" ? Tokens.Colour.accent01 : undefined}
+        aria-label={"Projects page"}
       />
 
       <TextButton
@@ -50,6 +52,7 @@ export const NavLinks = ({ width }: NavLinkProps) => {
         icon={Icons.faDownload}
         onClick={() => onClick("/Downloads", "Downloads")}
         colour={activePage === "Downloads" ? Tokens.Colour.accent01 : undefined}
+        aria-label={"Downloads page"}
       />
 
       <TextButton
@@ -57,6 +60,7 @@ export const NavLinks = ({ width }: NavLinkProps) => {
         icon={Icons.faCalendarAlt}
         onClick={() => onClick("/Events", "Events")}
         colour={activePage === "Events" ? Tokens.Colour.accent01 : undefined}
+        aria-label={"Events page"}
       />
 
       <TextButton
@@ -64,6 +68,7 @@ export const NavLinks = ({ width }: NavLinkProps) => {
         icon={Icons.faHeartbeat}
         onClick={() => onClick("/Support", "Support")}
         colour={activePage === "Support" ? Tokens.Colour.accent01 : undefined}
+        aria-label={"Support page"}
       />
     </NavLinkWrapper>
   );

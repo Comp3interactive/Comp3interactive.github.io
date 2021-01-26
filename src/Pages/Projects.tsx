@@ -34,6 +34,7 @@ export const Projects = (width: number) => {
 
   return (
     <Grid container>
+      <h1 aria-label={"Projects"} />
       <Grid container>
         <Grid item md={8} xs={12}>
           <Card>
@@ -61,6 +62,7 @@ export const Projects = (width: number) => {
               src={"Images/Projects/BehindClosedDoors.png"}
               width={"100%"}
               onClick={() => openLink(Links.behindClosedDoorsTwitter)}
+              alt={"Behind Closed Doors Logo"}
             />
             <Button
               href={Links.behindClosedDoorsTwitter}
@@ -88,6 +90,7 @@ export const Projects = (width: number) => {
             <StyledImage
               src={"Images/Projects/WordDrop.png"}
               onClick={() => openLink(Links.wordDrop)}
+              alt={"Word Drop Logo"}
             />
             <Button
               href={Links.wordDrop}
@@ -103,6 +106,7 @@ export const Projects = (width: number) => {
             <StyledImage
               src={"Images/Projects/Ascension.png"}
               onClick={() => openLink(Links.ascension)}
+              alt={"Ascension Logo"}
             />
             <Button
               href={Links.ascension}

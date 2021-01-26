@@ -49,6 +49,7 @@ export const Downloads = (width: number) => {
 
   return (
     <Grid container>
+      <h1 aria-label={"Downloads"} />
       <Grid container>
         <Grid item sm={4} xs={12}>
           <Card>
@@ -114,7 +115,10 @@ export const Downloads = (width: number) => {
               </IconWrapper>{" "}
               Wallpapers
             </Typo.SectionHeader>
-            <StyledImage src={"Images/Branding/LogoTransparent.png"} />
+            <StyledImage
+              src={"Images/Branding/LogoTransparent.png"}
+              alt={"Comp-3 Interactive Logo"}
+            />
             <Typo.P>
               Recently I created a new look... A new logo, social banners and so
               on, I also created myself a few wallpapers for my PCs and Mac.
@@ -134,6 +138,7 @@ export const Downloads = (width: number) => {
               onClick={() =>
                 openWallpaper("Images/Wallpapers/Wallpapers_PurpleOnGrey.png")
               }
+              alt={"Button to download wallpaper"}
             />
 
             <Typo.SectionHeader>White on Grey</Typo.SectionHeader>
@@ -142,6 +147,7 @@ export const Downloads = (width: number) => {
               onClick={() =>
                 openWallpaper("Images/Wallpapers/Wallpapers_WhiteOnGrey.png")
               }
+              alt={"Button to download wallpaper"}
             />
 
             <Typo.SectionHeader>White on Purple</Typo.SectionHeader>
@@ -150,6 +156,7 @@ export const Downloads = (width: number) => {
               onClick={() =>
                 openWallpaper("Images/Wallpapers/Wallpapers_WhiteOnPurple.png")
               }
+              alt={"Button to download wallpaper"}
             />
             <br />
           </Card>

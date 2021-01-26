@@ -17,8 +17,13 @@ const Styled404 = styled.img<{ width: number }>`
 export const FourZeroFour = (width: number) => {
   return (
     <Card>
+      <h1 aria-label={"404 Page"} />
       <Wrapper404 width={width}>
-        <Styled404 src="Images/Illustrations/404.png" width={width} />
+        <Styled404
+          src="Images/Illustrations/404.png"
+          width={width}
+          alt={"404 Image"}
+        />
 
         <div>
           <Typo.SectionHeader>STOP SCREWING AROUND</Typo.SectionHeader>

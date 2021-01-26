@@ -26,6 +26,7 @@ const IconWrapper = styled.span`
 export const Home = (width: number) => {
   return (
     <Grid container>
+      <h1 aria-label={"Comp-3 Interactive Home Page"} />
       <Grid item xs={12}>
         <InfoBar />
       </Grid>
@@ -61,7 +62,10 @@ export const Home = (width: number) => {
             page! Just don't forget to like, comment and subscribe!
           </Typo.P>
 
-          <StyledImage src={"Images/Branding/LogoTransparent.png"} />
+          <StyledImage
+            src={"Images/Branding/LogoTransparent.png"}
+            alt={"Comp-3 Interactive Logo"}
+          />
           <Button
             href={Links.youtube}
             label="Start Learning Now"

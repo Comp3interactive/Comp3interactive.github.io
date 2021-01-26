@@ -30,16 +30,32 @@ export const Footer = () => {
         Copyright © Comp-3 Interactive 2019-2021. All rights reserved
       </Typo.Copyright>
       <div>
-        <IconWrapper href={Links.youtube} target="_blank">
+        <IconWrapper
+          href={Links.youtube}
+          target="_blank"
+          aria-label={"Link to YouTube"}
+        >
           <FontAwesomeIcon icon={Brands.faYoutube} />
         </IconWrapper>
-        <IconWrapper href={Links.facebook} target="_blank">
+        <IconWrapper
+          href={Links.facebook}
+          target="_blank"
+          aria-label={"Link to Facebook"}
+        >
           <FontAwesomeIcon icon={Brands.faFacebook} />
         </IconWrapper>
-        <IconWrapper href={Links.twitter} target="_blank">
+        <IconWrapper
+          href={Links.twitter}
+          target="_blank"
+          aria-label={"Link to Twitter"}
+        >
           <FontAwesomeIcon icon={Brands.faTwitter} />
         </IconWrapper>
-        <IconWrapper href={Links.patreon} target="_blank">
+        <IconWrapper
+          href={Links.patreon}
+          target="_blank"
+          aria-label={"Link to Patreon"}
+        >
           <FontAwesomeIcon icon={Brands.faPatreon} />
         </IconWrapper>
       </div>

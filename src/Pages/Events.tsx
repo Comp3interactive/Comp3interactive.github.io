@@ -14,6 +14,7 @@ const IconWrapper = styled.span`
 export const Events = (width: number) => {
   return (
     <Grid container>
+      <h1 aria-label={"Events"} />
       <Grid item md={6} xs={12}>
         <Card>
           <Typo.SectionHeader>
