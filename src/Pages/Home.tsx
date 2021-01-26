@@ -59,7 +59,11 @@ export const Home = (width: number) => {
           </Typo.P>
 
           <StyledImage src={"Images/Branding/LogoTransparent.png"} />
-          <Button href="" label="Start Learning Now" icon={Brands.faYoutube} />
+          <Button
+            href={Links.youtube}
+            label="Start Learning Now"
+            icon={Brands.faYoutube}
+          />
           <br />
         </Card>
       </Grid>

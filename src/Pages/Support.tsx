@@ -7,6 +7,7 @@ import { Grid } from "@material-ui/core";
 import * as Brands from "@fortawesome/free-brands-svg-icons";
 import * as Icons from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Links } from "../Utils/ExternalLinks";
 
 const IconWrapper = styled.span`
   color: ${Tokens.Colour.accent01};
@@ -15,7 +16,7 @@ const IconWrapper = styled.span`
 export const Support = (width: number) => {
   return (
     <Grid container>
-      <Grid item md={12} xs={12}>
+      <Grid item md={8} xs={12}>
         <Card>
           <Typo.SectionHeader>
             <IconWrapper>
@@ -43,8 +44,62 @@ export const Support = (width: number) => {
             around here!
           </Typo.P>
 
-          <Button href="" label="Support Us" icon={Brands.faPatreon} />
+          <Button
+            href={Links.patreon}
+            label="Support Us"
+            icon={Brands.faPatreon}
+          />
           <br />
+        </Card>
+      </Grid>
+
+      <Grid item md={4} xs={12}>
+        <Card>
+          <Typo.SectionHeader>
+            <IconWrapper>
+              <FontAwesomeIcon icon={Icons.faSearchDollar} />
+            </IconWrapper>{" "}
+            Transparency
+          </Typo.SectionHeader>
+          <Typo.P>
+            I want you to know where your patronage is spent, it's not all on
+            beer!
+          </Typo.P>
+
+          <Typo.P>
+            Currently the funds gained from Patreon, asset sales and YouTube ad
+            revenue regularly go / have gone / will go towards buying:
+          </Typo.P>
+
+          <Typo.P>
+            <FontAwesomeIcon icon={Icons.faPenFancy} /> Adobe Create Cloud Suite
+            monthly subscriptions
+          </Typo.P>
+
+          <Typo.P>
+            <FontAwesomeIcon icon={Icons.faMicrophone} /> Higher quality
+            recording equipment
+          </Typo.P>
+
+          <Typo.P>
+            <FontAwesomeIcon icon={Icons.faBuilding} /> Office space
+            improvements
+          </Typo.P>
+
+          <Typo.P>
+            <FontAwesomeIcon icon={Icons.faGamepad} /> Buying asset packs from
+            other creators for tutorials / personal projects
+          </Typo.P>
+
+          <Typo.P>
+            <FontAwesomeIcon icon={Icons.faAward} /> Prizes for channel
+            giveaways
+          </Typo.P>
+
+          <Typo.P>
+            <FontAwesomeIcon icon={Icons.faBeer} /> Maybe a <em>little</em> bit
+            of beer
+          </Typo.P>
         </Card>
       </Grid>
     </Grid>

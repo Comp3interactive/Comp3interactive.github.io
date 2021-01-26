@@ -6,6 +6,7 @@ import * as Typo from "../Components/Typography/Typography";
 import { Grid } from "@material-ui/core";
 import * as Brands from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Links } from "../Utils/ExternalLinks";
 
 const IconWrapper = styled.span`
   color: ${Tokens.Colour.accent01};
@@ -68,7 +69,11 @@ export const Downloads = (width: number) => {
               Downloads include pixel art dungeons sets, stylised UI packs and
               more!
             </Typo.P>
-            <Button href="" label="Browse Assets" icon={Brands.faItchIo} />
+            <Button
+              href={Links.itch}
+              label="Browse Assets"
+              icon={Brands.faItchIo}
+            />
             <br />
           </Card>
         </Grid>
@@ -93,7 +98,7 @@ export const Downloads = (width: number) => {
               Ads manager and more utility scripts!
             </Typo.P>
             <Button
-              href=""
+              href={Links.github}
               label="Browse Code Snippets"
               icon={Brands.faGithub}
             />

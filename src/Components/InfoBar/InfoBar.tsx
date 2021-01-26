@@ -18,7 +18,7 @@ export const InfoBar = () => {
       </Grid>
 
       <Grid item md={3} xs={6}>
-        <Counter numberValue={"0"} text={"Qualifications"} />
+        <Counter numberValue={"1"} text={"Year on YouTube"} />
       </Grid>
     </Grid>
   );

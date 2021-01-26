@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 
 const StyledHeader = styled.img`
   width: 100%;
+  border-radius: 10px;
 `;
 
 export const Header = () => {

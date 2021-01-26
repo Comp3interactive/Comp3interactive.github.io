@@ -7,6 +7,7 @@ import { Grid } from "@material-ui/core";
 import * as Brands from "@fortawesome/free-brands-svg-icons";
 import * as Icons from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Links } from "../Utils/ExternalLinks";
 
 const IconWrapper = styled.span`
   color: ${Tokens.Colour.accent01};
@@ -20,9 +21,17 @@ const StyledImage = styled.img<{ width?: string }>`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const Projects = (width: number) => {
+  const openLink = (url: string) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <Grid container>
       <Grid container>
@@ -51,9 +60,10 @@ export const Projects = (width: number) => {
             <StyledImage
               src={"Images/Projects/BehindClosedDoors.png"}
               width={"100%"}
+              onClick={() => openLink(Links.behindClosedDoorsTwitter)}
             />
             <Button
-              href=""
+              href={Links.behindClosedDoorsTwitter}
               label="Follow The Devlogs"
               icon={Brands.faTwitter}
             />
@@ -75,9 +85,12 @@ export const Projects = (width: number) => {
               A fast paced work searching game, you have 2 minutes to find as
               many words from the randomised set as you can!
             </Typo.P>
-            <StyledImage src={"Images/Projects/WordDrop.png"} />
+            <StyledImage
+              src={"Images/Projects/WordDrop.png"}
+              onClick={() => openLink(Links.wordDrop)}
+            />
             <Button
-              href=""
+              href={Links.wordDrop}
               label="Play Word Drop Here"
               icon={Brands.faGooglePlay}
             />
@@ -87,9 +100,12 @@ export const Projects = (width: number) => {
               A simple infinate climber for Android. Tap the left side to jump,
               tap the right side to attack! How far can you climb?
             </Typo.P>
-            <StyledImage src={"Images/Projects/Ascension.png"} />
+            <StyledImage
+              src={"Images/Projects/Ascension.png"}
+              onClick={() => openLink(Links.ascension)}
+            />
             <Button
-              href=""
+              href={Links.ascension}
               label="Play Ascension Here"
               icon={Brands.faGooglePlay}
             />
