@@ -86,9 +86,9 @@ export const Home = (width: number) => {
           </Typo.SectionHeader>
 
           <Typo.P>
-            Everyone knows you're busy and I know you probably wont be reading
+            Everyone knows you're busy and I know you probably won't be reading
             most of the content on this website, so here you go, quick links to
-            everywhere you can find me!
+            everywhere you can find us!
           </Typo.P>
 
           <Grid container spacing={1}>

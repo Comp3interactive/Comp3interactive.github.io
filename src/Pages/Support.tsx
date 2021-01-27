@@ -73,33 +73,46 @@ export const Support = (width: number) => {
           </Typo.P>
 
           <Typo.P>
-            <FontAwesomeIcon icon={Icons.faPenFancy} /> Adobe Create Cloud Suite
-            monthly subscriptions
+            <IconWrapper>
+              <FontAwesomeIcon icon={Icons.faPenFancy} />
+            </IconWrapper>{" "}
+            Adobe Create Cloud Suite monthly subscriptions
           </Typo.P>
 
           <Typo.P>
-            <FontAwesomeIcon icon={Icons.faMicrophone} /> Higher quality
-            recording equipment
+            <IconWrapper>
+              <FontAwesomeIcon icon={Icons.faMicrophone} />
+            </IconWrapper>{" "}
+            Higher quality recording equipment
           </Typo.P>
 
           <Typo.P>
-            <FontAwesomeIcon icon={Icons.faBuilding} /> Office space
-            improvements
+            <IconWrapper>
+              <FontAwesomeIcon icon={Icons.faBuilding} />
+            </IconWrapper>{" "}
+            Office space improvements
           </Typo.P>
 
           <Typo.P>
-            <FontAwesomeIcon icon={Icons.faGamepad} /> Buying asset packs from
-            other creators for tutorials / personal projects
+            <IconWrapper>
+              <FontAwesomeIcon icon={Icons.faGamepad} />
+            </IconWrapper>{" "}
+            Buying asset packs from other creators for tutorials / personal
+            projects
           </Typo.P>
 
           <Typo.P>
-            <FontAwesomeIcon icon={Icons.faAward} /> Prizes for channel
-            giveaways
+            <IconWrapper>
+              <FontAwesomeIcon icon={Icons.faAward} />
+            </IconWrapper>{" "}
+            Prizes for channel giveaways
           </Typo.P>
 
           <Typo.P>
-            <FontAwesomeIcon icon={Icons.faBeer} /> Maybe a <em>little</em> bit
-            of beer
+            <IconWrapper>
+              <FontAwesomeIcon icon={Icons.faBeer} />
+            </IconWrapper>{" "}
+            Maybe a <em>little</em> bit of beer
           </Typo.P>
         </Card>
       </Grid>
