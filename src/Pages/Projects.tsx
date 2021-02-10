@@ -44,30 +44,28 @@ export const Projects = (width: number) => {
               </IconWrapper>{" "}
               Current Projects
             </Typo.SectionHeader>
-            <Typo.SectionHeader>Behind Closed Doors</Typo.SectionHeader>
+            <Typo.SectionHeader>The Thirteenth Floor</Typo.SectionHeader>
             <Typo.P>
-              Behind Closed Doors is a PS1 inspired, first person, horror
-              survival game! You play officer [Has No Name Yet], you find
-              yourself trapped inside a mansion after an investigation gone
-              wrong... You need to escape as quickly as you can before the axe
-              wielding manic tracks you down!
+              The Thirteenth Floor is a PS1 inspired, first person, horror
+              experience! You awaken on the thirteenth floor of a hotel to
+              strange noises, once you leave your room you must uncover the
+              mystery of what's happening in this hotel.
             </Typo.P>
             <Typo.P>
-              The current plan is for a Steam release but this is my current
-              fulltime project. There is no estimated release date at the moment
-              because I'm working around my day job and family life.
+              Smooth controls, puzzels, old school look and feel. What more
+              could you want??
             </Typo.P>
 
             <StyledImage
-              src={"Images/Projects/BehindClosedDoors.png"}
+              src={"Images/Projects/ThirteenthFloor.png"}
               width={"100%"}
-              onClick={() => openLink(Links.behindClosedDoorsTwitter)}
-              alt={"Behind Closed Doors Logo"}
+              onClick={() => openLink(Links.thirteenthFloor)}
+              alt={"The Thirteenth Floor Logo"}
             />
             <Button
-              href={Links.behindClosedDoorsTwitter}
-              label="Follow The Devlogs"
-              icon={Brands.faTwitter}
+              href={Links.thirteenthFloor}
+              label="Follow Progress Here"
+              icon={Brands.faItchIo}
             />
             <br />
           </Card>
