@@ -6,7 +6,7 @@ export const InfoBar = () => {
   return (
     <Grid container>
       <Grid item md={3} xs={6}>
-        <Counter numberValue={"3800+"} text={"Subscribers"} />
+        <Counter numberValue={"5000+"} text={"Subscribers"} />
       </Grid>
 
       <Grid item md={3} xs={6}>
